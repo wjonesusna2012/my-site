@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@keyframes rotateExpand {
+  0% {rotate: 0;}
+  80%{rotate: 495deg;}
+  100% {rotate: 405deg;}
+}

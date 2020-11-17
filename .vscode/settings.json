@@ -1,0 +1,19 @@
+{
+  "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+  },
+  "eslint.format.enable": true,
+  "git.enableSmartCommit": true,
+  "editor.tabSize": 2,
+  "explorer.enableDragAndDrop": false,
+  "eslint.packageManager": "yarn",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "eslint.onIgnoredFiles": "warn",
+  "eslint.codeAction.showDocumentation": {
+      "enable": true
+  },
+  "eslint.lintTask.enable": true,
+  "eslint.workingDirectories": [
+      
+  ]
+}

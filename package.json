@@ -14,7 +14,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --fix . && echo 'Lint complete.'",
+    "watch": "watch 'clear && npm run -s test | tap-nirvana && npm run -s lint' src"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +32,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "prettier": "^2.1.2",
+    "tap-nirvana": "^1.1.0",
+    "watch": "^1.0.2"
   }
 }

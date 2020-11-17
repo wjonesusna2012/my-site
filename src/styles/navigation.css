@@ -1,0 +1,11 @@
+div {
+  border: 1px solid black;
+}
+
+div .selected {
+  background-color: rgba(230, 230, 230, 1.0);
+}
+
+div .unselected {
+  background-color: rgba(150, 150, 150, 1.0);
+}
