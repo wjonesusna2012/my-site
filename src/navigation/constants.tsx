@@ -1,9 +1,9 @@
-export interface NavigationGridElement {
+export type NavigationGridElement {
   elementName: string,
   elementText: string,
 };
 
-export interface MenuElement {
+export type MenuElement {
   menuElementName: string,
   menuElementText: string,
   menuElementArray: Array<NavigationGridElement>,
