@@ -5,22 +5,24 @@ import '../styles/navigation.css';
 
 interface GridElementProps {
   elements: Array<NavigationGridElement>,
+  elementText: string,
   expanded: boolean,
-  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void,
+  onClick: (event: MouseEvent) => void,
 }
 
-const GridElement: React.FC<GridElementProps> = ({elements, expanded}) => {
+const GridElement: React.FC<GridElementProps> = ({elements, expanded, elementText}) => {
   const [selectedElement, setSelectedElement] = useState('');
   return (
-    <div>
+    <li className="NavFlexItemStatic">
+      {elementText}
       {expanded && elements.map(e =>{ 
         return (
-          <div id={e.elementName} onClick={() => setSelectedElement(e.elementName)} className={`{selectedElement === e.elementName ? 'selected' : 'unselected'}`}>
+          <div id={e.elementName} onClick={() => setSelectedElement(e.elementName)} className={`{selectedElement === e.elementName ? 'selected NavSubItem' : 'unselected NavSubItem'}`}>
             {e.elementText}
           </div>
         );
         })}
-    </div>
+    </li>
   );
 };
 

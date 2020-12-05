@@ -1,9 +1,9 @@
-export type NavigationGridElement {
+export type NavigationGridElement = {
   elementName: string,
   elementText: string,
 };
 
-export type MenuElement {
+export type MenuElement = {
   menuElementName: string,
   menuElementText: string,
   menuElementArray: Array<NavigationGridElement>,
@@ -19,8 +19,14 @@ export const WorkElements: Array<NavigationGridElement> = [
   { elementName: 'navy', elementText: 'Navy' },
 ];
 
+export const StoreElements: Array<NavigationGridElement> = [
+  { elementName: 'merchandise', elementText: 'Merch' },
+  { elementName: 'projects', elementText: 'Project Materials' },
+];
+
 export const menuElements: Array<MenuElement> = [
   { menuElementName: 'about', menuElementText: 'About Me', menuElementArray: AboutMeElements, },
   { menuElementName: 'work', menuElementText: 'Work', menuElementArray: WorkElements },
+  { menuElementName: 'store', menuElementText: 'Store', menuElementArray: StoreElements },
 ];
 

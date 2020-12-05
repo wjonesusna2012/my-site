@@ -1,5 +1,73 @@
-div {
-  border: 1px solid black;
+:root {
+  --main-background: #5CDB95;
+  --main-text: #EDF5E1;
+  --alt-text: #05386B;
+  --highlight: #379683;
+  --light-highlight: #8EE4AF;
+}
+
+body {
+  height: 100%;
+  background-color: var(--main-background);
+}
+
+.NavFlexContainer {
+  background-color: var(--alt-text);
+  width: 100%;
+  color: var(--main-text); 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: 22px;
+}
+
+.NavFlexItemGrow {
+  flex: 1 1 auto;
+  border: none;
+  position: relative;
+}
+.NavFlexItemStatic {
+  flex: 0 0 auto;
+  border: none;
+  position: relative;
+}
+
+.NavSubItem {
+  position: absolute; 
+}
+
+.navigationBar {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0px 2%;
+}
+
+nav ul li::before {
+  content: '';
+  top: -5px;
+  left: 10%;
+  width: 0;
+  height: 4px;
+  background-color: var(--light-highlight);
+  border-radius: 2px;
+  display: inline-block;
+  position: absolute;
+}
+
+nav ul li:hover::before {
+  width: 80%;
+  transition: width 250ms ease-in;
 }
 
 div .selected {
