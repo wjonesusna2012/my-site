@@ -7,7 +7,7 @@ interface GridElementProps {
   elements: Array<NavigationGridElement>,
   elementText: string,
   expanded: boolean,
-  onClick: (event: MouseEvent) => void,
+  onClick: () => void,
 }
 
 const GridElement: React.FC<GridElementProps> = ({elements, expanded, elementText}) => {

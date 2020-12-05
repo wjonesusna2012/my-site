@@ -9,6 +9,7 @@
 body {
   height: 100%;
   background-color: var(--main-background);
+  font-family: Copperplate;
 }
 
 .NavFlexContainer {
@@ -76,4 +77,9 @@ div .selected {
 
 div .unselected {
   background-color: rgba(150, 150, 150, 1.0);
+}
+
+.firstLetterEmphasized::first-letter {
+  color: var(--highlight);
+  font-size: 30px;
 }

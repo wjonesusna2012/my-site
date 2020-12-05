@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import _ from 'lodash';
 import { menuElements, NavigationGridElement } from './constants';
 import GridElement from './gridElement';
+import NameRandomizer from './nameRandomizer';
 const NavigationMenu: React.FunctionComponent = () => {
   const [expandedElements, setExpandedElements] = useState<Array<String>>([]);
   const toggleExpandedElements = (elementArray: Array<String>, elementToToggle: String) => {
@@ -20,8 +21,7 @@ const NavigationMenu: React.FunctionComponent = () => {
               <GridElement
                 elements={element.menuElementArray}
                 expanded={_.includes(expandedElements, element.menuElementName)}
-                onClick={(e: MouseEvent) => {
-                  e.preventDefault();
+                onClick={() => {
                   console.log('HELLO');
                   toggleExpandedElements(expandedElements, element.menuElementName)
                 }}
@@ -32,7 +32,7 @@ const NavigationMenu: React.FunctionComponent = () => {
           </ul>
         </nav>
       </div>
-      <div className="NavFlexItemStatic">Placeholder for Toggle</div>
+      <NameRandomizer />
     </div>
   );
 };

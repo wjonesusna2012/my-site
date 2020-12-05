@@ -30,3 +30,7 @@ export const menuElements: Array<MenuElement> = [
   { menuElementName: 'store', menuElementText: 'Store', menuElementArray: StoreElements },
 ];
 
+
+export const wWords = ['Weather', 'Watermelon', 'Witchcraft'];
+export const jWords = ['Jackalope', 'Jezabelle', 'Jazz'];
+
