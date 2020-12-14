@@ -1,0 +1,42 @@
+img {
+  display: block;
+}
+
+:root {
+  --main-background: #5CDB95;
+  --main-text: #EDF5E1;
+  --alt-text: #05386B;
+  --highlight: #379683;
+  --light-highlight: #8EE4AF;
+}
+
+.CardContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.CardDescription {
+  opacity: 0.2;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--alt-text);
+  color: var(--main-text);
+}
+
+.CardDescription:hover {
+  opacity: 0.8;
+  transition: opacity ease-in 300ms;
+}
+
+.LeftArrow {
+  position: absolute;
+  bottom: 200px;
+  left:0;
+}
+
+.RightArrow {
+  position: absolute;
+  bottom: 200px;
+  right:0;
+}

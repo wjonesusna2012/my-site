@@ -2,7 +2,7 @@ import { random } from 'lodash';
 import React, { useState } from 'react';
 import { wWords, jWords } from './constants';
 const NameRandomizer: React.FC = () => {
-  const [inputWords, setInputWords] = useState<Array<string>>(['Test', 'Text']);
+  const [inputWords, setInputWords] = useState<Array<string>>(['William', 'Jones']);
   const getRandomWords = (firstArray: Array<string>, secondArray: Array<string>) => {
     const rand1 = random(0, firstArray.length - 1);
     const rand2 = random(0, secondArray.length - 1);

@@ -1,27 +1,45 @@
 import * as React from 'react';
-import { useState } from 'react';
 import { NavigationGridElement } from './constants';
 import '../styles/navigation.css';
+import { MyContextProps, MyContext } from '../themes/themeProvider';
 
 interface GridElementProps {
   elements: Array<NavigationGridElement>,
   elementText: string,
-  expanded: boolean,
-  onClick: () => void,
+  elementName: string,
 }
 
-const GridElement: React.FC<GridElementProps> = ({elements, expanded, elementText}) => {
-  const [selectedElement, setSelectedElement] = useState('');
+const GridElement: React.FC<GridElementProps> = ({elements, elementName, elementText}) => {
+  // Type cannot be undefined once used
+  const context: MyContextProps | undefined = React.useContext<MyContextProps | undefined>(MyContext)!;
+  const { selected, setSelected } = context;
+  const onClickHandler = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (selected.expandedMenu === elementName) {
+      setSelected({selected: { selectedElement: selected.selectedElement, selectedMenu: selected.selectedMenu, expandedMenu: ''}});
+    } else {
+      setSelected({selected: { selectedElement: selected.selectedElement, selectedMenu: selected.selectedMenu, expandedMenu: elementName}});
+    }
+  };
   return (
-    <li className="NavFlexItemStatic">
+    <li 
+      className={`NavFlexItemStatic ${elementName === selected.expandedMenu ? 'Expanded' : 'NotExpanded'} ${selected.selectedMenu === elementName ? 'SelectedSubItem' : ''}`} 
+      onClick={onClickHandler}
+    >
       {elementText}
-      {expanded && elements.map(e =>{ 
+      {elementName === selected.expandedMenu ? (<div className="NavSubItem">
+        {elements.map(e => { 
         return (
-          <div id={e.elementName} onClick={() => setSelectedElement(e.elementName)} className={`{selectedElement === e.elementName ? 'selected NavSubItem' : 'unselected NavSubItem'}`}>
-            {e.elementText}
-          </div>
+            <div id={e.elementName} onClick={(m: React.MouseEvent<HTMLDivElement>) => {
+                m.stopPropagation();
+                setSelected({selected: { expandedMenu: selected.expandedMenu, selectedElement: e.elementName, selectedMenu: elementName }});
+              }}
+              className={`SubMenuItem ${selected.selectedElement === e.elementName ? 'selected' : 'unselected'}`}>
+              {e.elementText}
+            </div>
         );
         })}
+        </div>) : ''}
     </li>
   );
 };
