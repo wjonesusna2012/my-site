@@ -32,7 +32,7 @@ const GridElement: React.FC<GridElementProps> = ({elements, elementName, element
         return (
             <div id={e.elementName} onClick={(m: React.MouseEvent<HTMLDivElement>) => {
                 m.stopPropagation();
-                setSelected({selected: { expandedMenu: selected.expandedMenu, selectedElement: e.elementName, selectedMenu: elementName }});
+                setSelected({selected: { expandedMenu: '', selectedElement: e.elementName, selectedMenu: elementName }});
               }}
               className={`SubMenuItem ${selected.selectedElement === e.elementName ? 'selected' : 'unselected'}`}>
               {e.elementText}

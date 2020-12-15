@@ -1,19 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/card.css';
+import Arrow from './arrow/arrow';
 
 interface CardProps {
   description: string,
   imageName: string,
+  changeCardLeft: () => void,
+  changeCardRight: () => void,
 }
 
-const Card: React.FC<CardProps> = ({ description, imageName }) => {
+const Card: React.FC<CardProps> = ({ description, imageName, changeCardLeft, changeCardRight}) => {
+  const [hovered, setHovered] = useState(false);
   return (
-    <div className="CardContainer">
-    {/* <img src={`../images/${imageName}`} /> */}
-      <img src="https://unsplash.it/500/500" />
-      <div className="CardDescription">{description}</div> 
-      <div className="LeftArrow">&lt;-</div>
-      <div className="RightArrow">-&gt;</div>
+    <div className="CardContainer" onMouseOver={() => { setHovered(true)}} onMouseOut={() => { setHovered(false)}}>
+      <img src={`${imageName}`} />
+      <Arrow 
+        direction="Left" 
+        containerHovered={hovered} 
+        clickHandler={changeCardLeft}
+      />
+      <Arrow 
+        direction="Right" 
+        containerHovered={hovered} 
+        clickHandler={changeCardRight}
+      />
+      <div className={`CardDescription ${hovered ? 'ContainerHovered' : 'ContainerNotHovered'}`}>{description}</div> 
     </div>
   )
 } 

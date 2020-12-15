@@ -43,6 +43,7 @@ body {
   position: absolute; 
   min-width: 100%;
   left: 0;
+  z-index: 100;
 }
 
 .navigationBar {
@@ -93,7 +94,7 @@ nav ul li.NotExpanded:hover::before {
 }
 
 nav ul li.SelectedSubItem {
-  color: var(--light-highlight);
+  color: var(--highlight);
 }
 
 div .SubMenuItem {
@@ -103,7 +104,7 @@ div .SubMenuItem {
   padding: 10px;
   text-align: left;
   white-space: nowrap;
-  color: var(--main-text)
+  color: var(--main-text);
 }
 
 .NavSubItem:first-child {

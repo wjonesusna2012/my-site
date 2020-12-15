@@ -10,36 +10,30 @@ export type MenuElement = {
 };
 
 export const AboutMeElements: Array<NavigationGridElement> = [
-  { elementName: 'hobbies', elementText: 'Hobbies' },
-  { elementName: 'education', elementText: 'Education' },
+  { elementName: 'Hobbies', elementText: 'Hobbies' },
+  { elementName: 'Education', elementText: 'Education' },
 ];
 export const WorkElements: Array<NavigationGridElement> = [
-  { elementName: 'frontend', elementText: 'Frontend' },
-  { elementName: 'backend', elementText: 'Backend' },
-  { elementName: 'navy', elementText: 'Navy' },
+  { elementName: 'Frontend', elementText: 'Frontend' },
+  { elementName: 'Backend', elementText: 'Backend' },
+  { elementName: 'Navy', elementText: 'Navy' },
 ];
 
 export const StoreElements: Array<NavigationGridElement> = [
-  { elementName: 'merchandise', elementText: 'Merch' },
-  { elementName: 'projects', elementText: 'Project Materials' },
+  { elementName: 'Merchandise', elementText: 'Merch' },
+  { elementName: 'Projects', elementText: 'Project Materials' },
 ];
 
 export const contactElements: Array<NavigationGridElement> = [
-  { elementName: 'email', elementText: 'Email' },
-  { elementName: 'phone', elementText: 'Phone' },
-];
-
-export const girlfriendElements: Array<NavigationGridElement> = [
-  { elementName: 'job', elementText: 'Job' },
-  { elementName: 'personal', elementText: 'Children\'s School', }
+  { elementName: 'Email', elementText: 'Email' },
+  { elementName: 'Phone', elementText: 'Phone' },
 ];
 
 export const menuElements: Array<MenuElement> = [
-  { menuElementName: 'about', menuElementText: 'About Me', menuElementArray: AboutMeElements, },
-  { menuElementName: 'work', menuElementText: 'Work', menuElementArray: WorkElements },
-  { menuElementName: 'store', menuElementText: 'Store', menuElementArray: StoreElements },
-  { menuElementName: 'contact', menuElementText: 'Contact Me', menuElementArray: contactElements },
-  { menuElementName: 'girlfriend', menuElementText: 'Girlfriend', menuElementArray: girlfriendElements },
+  { menuElementName: 'About', menuElementText: 'About Me', menuElementArray: AboutMeElements, },
+  { menuElementName: 'Work', menuElementText: 'Work', menuElementArray: WorkElements },
+  { menuElementName: 'Store', menuElementText: 'Store', menuElementArray: StoreElements },
+  { menuElementName: 'Contact', menuElementText: 'Contact Me', menuElementArray: contactElements },
 ];
 
 export const wWords = ['Wounded', 'Woodworking', 'Weather', 'Wombo', 'Warrior'];

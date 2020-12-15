@@ -3,7 +3,6 @@ import _ from 'lodash';
 import { menuElements, NavigationGridElement } from './constants';
 import GridElement from './gridElement';
 import NameRandomizer from './nameRandomizer';
-import ThemeProvider from '../themes/themeProvider';
 const NavigationMenu: React.FunctionComponent = () => {
   return (
     <div className="NavFlexContainer">
@@ -11,16 +10,14 @@ const NavigationMenu: React.FunctionComponent = () => {
       <div className="NavFlexItemGrow">
         <nav className="navigationBar">
           <ul>
-            <ThemeProvider>
-              {menuElements.map((element) => (
-                <GridElement
-                  elements={element.menuElementArray}
-                  key={`GridElement${element.menuElementName}`}
-                  elementText={element.menuElementText}
-                  elementName={element.menuElementName}
-              ></GridElement> 
-              ))}
-            </ThemeProvider>
+            {menuElements.map((element) => (
+              <GridElement
+                elements={element.menuElementArray}
+                key={`GridElement${element.menuElementName}`}
+                elementText={element.menuElementText}
+                elementName={element.menuElementName}
+            ></GridElement> 
+            ))}
           </ul>
         </nav>
       </div>
