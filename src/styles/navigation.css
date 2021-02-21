@@ -78,10 +78,10 @@ nav ul li.Expanded {
 
 nav ul li.NotExpanded::before {
   content: '';
-  left: 10%;
-  top: 2px;
+  left: 15%;
+  top: 6px;
   width: 0;
-  height: 4px;
+  height: 2px;
   background-color: var(--main-text);
   border-radius: 2px;
   display: inline-block;
@@ -89,8 +89,8 @@ nav ul li.NotExpanded::before {
 }
 
 nav ul li.NotExpanded:hover::before {
-  width: 80%;
-  transition: width 100ms ease-in;
+  width: 70%;
+  transition: width 150ms ease-in;
 }
 
 nav ul li.SelectedSubItem {

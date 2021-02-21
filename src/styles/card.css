@@ -48,3 +48,47 @@ img {
   bottom: 50%;
   right: 0;
 }
+
+.LongCardDescription {
+  width: 500px;
+  height: 500px;
+  display: inline-block;
+  background-color: var(--alt-text);
+  color: var(--main-text);
+  overflow: hidden;
+  opacity: 0.8;
+  animation: ExpandCard 1500ms ease-out 0s 1;
+}
+
+.LongCardDescriptionHidden {
+  display: none;
+  opacity: 0.2;
+  color: var(--alt-text);
+}
+
+@keyframes ExpandCard {
+  0% {
+    height: 20px;
+    width: 0px;
+    opacity: 0.2;
+    color: var(--alt-text);
+  }
+  20% {
+    width: 500px;
+    height: 20px;
+    opacity: 0.2;
+    color: var(--alt-text);
+  }
+  50% {
+    width: 500px;
+    height: 500px;
+    opacity: 0.2;
+    color: var(--alt-text);
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0.8;
+    color: var(--main-text);
+  }
+}

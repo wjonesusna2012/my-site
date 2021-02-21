@@ -24,6 +24,8 @@ const App = () => {
   return (
     <div className="App">
       <NavigationMenu />
+      <h2>{selected.selectedMenu}</h2>
+      <h3>{selected.selectedElement}</h3>
       <ScrollCard items={itemsList} />
     </div>
   );

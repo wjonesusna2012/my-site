@@ -7,13 +7,14 @@ interface CardProps {
   imageName: string,
   changeCardLeft: () => void,
   changeCardRight: () => void,
+  expandDescription: () => void,
 }
 
-const Card: React.FC<CardProps> = ({ description, imageName, changeCardLeft, changeCardRight}) => {
+const Card: React.FC<CardProps> = ({ description, imageName, changeCardLeft, changeCardRight, expandDescription}) => {
   const [hovered, setHovered] = useState(false);
   return (
     <div className="CardContainer" onMouseOver={() => { setHovered(true)}} onMouseOut={() => { setHovered(false)}}>
-      <img src={`${imageName}`} />
+      <img src={`${imageName}`} onClick={() => expandDescription()}/>
       <Arrow 
         direction="Left" 
         containerHovered={hovered} 
