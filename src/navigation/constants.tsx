@@ -14,8 +14,7 @@ export const AboutMeElements: Array<NavigationGridElement> = [
   { elementName: 'Education', elementText: 'Education' },
 ];
 export const WorkElements: Array<NavigationGridElement> = [
-  { elementName: 'Frontend', elementText: 'Frontend' },
-  { elementName: 'Backend', elementText: 'Backend' },
+  { elementName: 'Fullstack', elementText: 'Full-stack' },
   { elementName: 'Navy', elementText: 'Navy' },
 ];
 
@@ -24,15 +23,21 @@ export const StoreElements: Array<NavigationGridElement> = [
   { elementName: 'Projects', elementText: 'Project Materials' },
 ];
 
+export const SkillsElements: Array<NavigationGridElement> = [
+  { elementName: 'Skills', elementText: 'Soft Skills' },
+  { elementName: 'Accredations', elementText: 'Accredations' },
+]
+
 export const contactElements: Array<NavigationGridElement> = [
   { elementName: 'Email', elementText: 'Email' },
   { elementName: 'Phone', elementText: 'Phone' },
 ];
 
 export const menuElements: Array<MenuElement> = [
-  { menuElementName: 'About', menuElementText: 'About Me', menuElementArray: AboutMeElements, },
   { menuElementName: 'Work', menuElementText: 'Work', menuElementArray: WorkElements },
-  { menuElementName: 'Store', menuElementText: 'Store', menuElementArray: StoreElements },
+  // { menuElementName: 'Store', menuElementText: 'Store', menuElementArray: StoreElements },
+  { menuElementName: 'About', menuElementText: 'About Me', menuElementArray: AboutMeElements, },
+  { menuElementName: 'Skills', menuElementText: 'Skills', menuElementArray: SkillsElements, },
   { menuElementName: 'Contact', menuElementText: 'Contact Me', menuElementArray: contactElements },
 ];
 

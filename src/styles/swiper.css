@@ -1,0 +1,38 @@
+.swipeCardWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.swipeDivider {
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: rgba(255, 100, 50, 1.0);
+  left: 0;
+  will-change: left;
+  z-index: 3;
+}
+
+.swipeCardLayerTop {
+  position: absolute;
+  background-color: white;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+}
+
+.swipeCardLayerBottom {
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+      
+h1 {
+  position: absolute;
+  top: 10px;
+  background-color: rgba(0, 0, 0, 0);
+}
+      

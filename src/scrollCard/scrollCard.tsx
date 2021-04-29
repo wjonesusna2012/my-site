@@ -1,6 +1,4 @@
-import { divide } from 'lodash';
-import React, {useState, useEffect} from 'react';
-import { setConstantValue } from 'typescript';
+import React, { useState, useEffect } from 'react';
 import Card from '../card/card';
 
 const ScrollCard: React.FC<({items: Array<{image: string, description: string, longDescription: string}>})> = ({items}) => {
@@ -28,7 +26,16 @@ const ScrollCard: React.FC<({items: Array<{image: string, description: string, l
         changeCardRight={changeCurrentCardBoundedRight} 
         expandDescription={toggleDescription}
       />
-      <div className={`LongCardDescription${expandDesc ? '' : 'Hidden'}`}>{items[currentCard].longDescription}</div>
+      <div className={`LongCardDescription${expandDesc ? '' : 'Hidden'}`}>
+        <div className={`CardDescriptionFlexContainer`}>
+          <div className={`CardDescriptionContainer`}>
+            {items[currentCard].longDescription}
+          </div>
+          <div className="CardDescriptionDecorator">
+            Tilde
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

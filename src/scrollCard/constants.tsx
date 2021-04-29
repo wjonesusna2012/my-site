@@ -1,13 +1,13 @@
-import Building from '../images/Building.jpg';
-import Power from '../images/Power.jpg';
-import School from '../images/School.jpg';
 import Climbing from '../images/Climbing.jpg';
-
-import Car from '../images/Car.jpg';
-import Mountain from '../images/Mountain.jpg';
-import Ocean from '../images/Ocean.jpg';
-
+import Dancing from '../images/Dancing.jpg';
+import DIY from '../images/DIY.jpg';
+import USNA from '../images/usna.jpg';
+import Helena from '../images/Helena.jpg';
 import ClimbingDescription from '../textFiles/climbingDescriptions';
+import SchoolEducationDescription from '../textFiles/educationDescription';
+import SubmarineEducationDescription from '../textFiles/submarineEducationDescription';
+import DancingDescription from '../textFiles/dancingDescription';
+import DoItYourself from '../textFiles/doItYourself';
 
 const itemObject = {
   'AboutHobbiesItems': [
@@ -17,26 +17,50 @@ const itemObject = {
       longDescription: ClimbingDescription.longDescription,
     },
     { 
-      description: 'Test Description Power', 
-      image: Power,
-      longDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac nulla et ligula mollis hendrerit eu eu sem. Nam varius lacus nec egestas dignissim. Cras in nisl imperdiet, commodo velit eu, rhoncus ligula. Vivamus ac nisi nisl. Sed tempor fringilla odio, eu aliquam risus aliquam quis. Aenean eget ullamcorper leo. Duis et erat vulputate, lacinia quam nec, semper risus. Fusce non velit sit amet erat dictum ultrices eu non neque. Nulla tempus metus magna, id fringilla tortor accumsan eget. Nullam tincidunt, ipsum id finibus fermentum, enim est imperdiet mi, et pretium urna ante porttitor ipsum.',
+      description: DancingDescription.shortDescription, 
+      image: Dancing,
+      longDescription: DancingDescription.longDescription,
     },
     { 
-      description: 'Test Description Bulding', 
-      image: Building,
-      longDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac nulla et ligula mollis hendrerit eu eu sem. Nam varius lacus nec egestas dignissim. Cras in nisl imperdiet, commodo velit eu, rhoncus ligula. Vivamus ac nisi nisl. Sed tempor fringilla odio, eu aliquam risus aliquam quis. Aenean eget ullamcorper leo. Duis et erat vulputate, lacinia quam nec, semper risus. Fusce non velit sit amet erat dictum ultrices eu non neque. Nulla tempus metus magna, id fringilla tortor accumsan eget. Nullam tincidunt, ipsum id finibus fermentum, enim est imperdiet mi, et pretium urna ante porttitor ipsum.',
+      description: DoItYourself.shortDescription, 
+      image: DIY,
+      longDescription: DoItYourself.longDescription,
      },
   ],
   'AboutEducationItems': [
     { 
-      description: 'Test Description Education Car', 
-      image: Car,
-      longDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac nulla et ligula mollis hendrerit eu eu sem. Nam varius lacus nec egestas dignissim. Cras in nisl imperdiet, commodo velit eu, rhoncus ligula. Vivamus ac nisi nisl. Sed tempor fringilla odio, eu aliquam risus aliquam quis. Aenean eget ullamcorper leo. Duis et erat vulputate, lacinia quam nec, semper risus. Fusce non velit sit amet erat dictum ultrices eu non neque. Nulla tempus metus magna, id fringilla tortor accumsan eget. Nullam tincidunt, ipsum id finibus fermentum, enim est imperdiet mi, et pretium urna ante porttitor ipsum.',
+      description: SchoolEducationDescription.shortDescription, 
+      image: USNA,
+      longDescription: SchoolEducationDescription.longDescription,
     },
     { 
-      description: 'Test Description Education Mountain', 
-      image: Mountain,
-      longDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac nulla et ligula mollis hendrerit eu eu sem. Nam varius lacus nec egestas dignissim. Cras in nisl imperdiet, commodo velit eu, rhoncus ligula. Vivamus ac nisi nisl. Sed tempor fringilla odio, eu aliquam risus aliquam quis. Aenean eget ullamcorper leo. Duis et erat vulputate, lacinia quam nec, semper risus. Fusce non velit sit amet erat dictum ultrices eu non neque. Nulla tempus metus magna, id fringilla tortor accumsan eget. Nullam tincidunt, ipsum id finibus fermentum, enim est imperdiet mi, et pretium urna ante porttitor ipsum.',
+      description: SubmarineEducationDescription.shortDescription, 
+      image: Helena,
+      longDescription: SubmarineEducationDescription.longDescription,
+    },
+  ],
+  'WorkFullstackItems': [
+    { 
+      description: SchoolEducationDescription.shortDescription, 
+      image: USNA,
+      longDescription: SchoolEducationDescription.longDescription,
+    },
+    { 
+      description: SubmarineEducationDescription.shortDescription, 
+      image: Helena,
+      longDescription: SubmarineEducationDescription.longDescription,
+    },
+  ],
+  'WorkNavyItems': [
+    { 
+      description: SchoolEducationDescription.shortDescription, 
+      image: USNA,
+      longDescription: SchoolEducationDescription.longDescription,
+    },
+    { 
+      description: SubmarineEducationDescription.shortDescription, 
+      image: Helena,
+      longDescription: SubmarineEducationDescription.longDescription,
     },
   ],
 };
