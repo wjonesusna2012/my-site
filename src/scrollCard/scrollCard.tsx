@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../card/card';
+import Separator from '../images/separator1.png';
 
 const ScrollCard: React.FC<({items: Array<{image: string, description: string, longDescription: string}>})> = ({items}) => {
   const [currentCard, setCurrentCard] = useState(0);
@@ -32,7 +33,7 @@ const ScrollCard: React.FC<({items: Array<{image: string, description: string, l
             {items[currentCard].longDescription}
           </div>
           <div className="CardDescriptionDecorator">
-            Tilde
+            <img alt="Separator" src={Separator} />
           </div>
         </div>
       </div>

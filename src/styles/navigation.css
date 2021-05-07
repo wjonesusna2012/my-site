@@ -37,6 +37,7 @@ body {
   flex: 0 0 auto;
   border: none;
   position: relative;
+  cursor: pointer;
 }
 
 .NavSubItem {
@@ -139,7 +140,12 @@ div .unselected {
   font-size: 14px;
 }
 
+#NameDisplay:hover > * {
+  font-weight: bolder;
+  cursor: pointer;
+}
+
 .firstLetterEmphasized::first-letter {
-  color: var(--highlight);
   font-size: 20px;
+  color: var(--grey-background);
 }

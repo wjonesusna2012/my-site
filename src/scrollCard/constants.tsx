@@ -1,5 +1,5 @@
 import Climbing from '../images/Climbing.jpg';
-import Dancing from '../images/Dancing.jpg';
+import Salsa from '../images/Salsa.jpg';
 import DIY from '../images/DIY.jpg';
 import USNA from '../images/usna.jpg';
 import Helena from '../images/Helena.jpg';
@@ -18,7 +18,7 @@ const itemObject = {
     },
     { 
       description: DancingDescription.shortDescription, 
-      image: Dancing,
+      image: Salsa,
       longDescription: DancingDescription.longDescription,
     },
     { 

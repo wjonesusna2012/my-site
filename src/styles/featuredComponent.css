@@ -7,8 +7,10 @@
 }
 
 .featuredContainer {
-  display: flex;
+  display: grid;
   flex-direction: column;
+  position: absolute;
+  top: 50%;
   width: 200px;
 }
 
@@ -23,19 +25,18 @@
 
 .featuredContainerTitle {
   padding: 10px;
-  border: 2px solid var(--main-text); 
+  border: 1px solid var(--main-text); 
   cursor: default;
   font-size: 1.4rem;
 }
 
 .featuredContainerElement {
-  padding: 20px 0;
-  border: 2px solid var(--main-text); 
+  padding: 15px 0;
+  border: 1px solid var(--main-text); 
   border-top: none;
   cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 4fr 6fr;
 }
 
 .featuredContainerElement:hover {

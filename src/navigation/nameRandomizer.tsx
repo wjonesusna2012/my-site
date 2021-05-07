@@ -9,7 +9,7 @@ const NameRandomizer: React.FC = () => {
     return [firstArray[rand1], secondArray[rand2]];
   }
   return (
-    <div className="NavFlexItemStatic" style={{width: '200px'}} onClick={() => {
+    <div className="NavFlexItemStatic" id="NameDisplay" style={{width: '200px'}} onClick={() => {
       const result = getRandomWords(wWords, jWords);
       setInputWords(result);
     }}>
