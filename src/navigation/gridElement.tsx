@@ -2,14 +2,16 @@ import * as React from 'react';
 import { NavigationGridElement } from './constants';
 import '../styles/navigation.css';
 import { MyContextProps, MyContext } from '../themes/themeProvider';
+import { Link } from 'react-router-dom';
 
 interface GridElementProps {
   elements: Array<NavigationGridElement>,
   elementText: string,
   elementName: string,
+  prependedPath: string,
 }
 
-const GridElement: React.FC<GridElementProps> = ({elements, elementName, elementText}) => {
+const GridElement: React.FC<GridElementProps> = ({elements, elementName, elementText, prependedPath}) => {
   // Type cannot be undefined once used
   const context: MyContextProps | undefined = React.useContext<MyContextProps | undefined>(MyContext)!;
   const { selected, setSelected } = context;
@@ -35,7 +37,9 @@ const GridElement: React.FC<GridElementProps> = ({elements, elementName, element
                 setSelected({selected: { expandedMenu: '', selectedElement: e.elementName, selectedMenu: elementName }});
               }}
               className={`SubMenuItem ${selected.selectedElement === e.elementName ? 'selected' : 'unselected'}`}>
-              {e.elementText}
+              <Link to={`${prependedPath}${e.elementPath}`}>
+                {e.elementText}
+              </Link>
             </div>
         );
         })}

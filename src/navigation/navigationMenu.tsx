@@ -17,7 +17,8 @@ const NavigationMenu: React.FunctionComponent = () => {
                 key={`GridElement${element.menuElementName}`}
                 elementText={element.menuElementText}
                 elementName={element.menuElementName}
-            ></GridElement> 
+                prependedPath={element.menuElementPath}
+              /> 
             ))}
           </ul>
         </nav>

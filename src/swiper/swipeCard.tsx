@@ -1,8 +1,10 @@
 import React, { useState, useRef } from 'react';
 import '../styles/swiper.css';
 
-const SwipeCard: React.FC<({leftText: string, leftPicture: string, rightText: string, rightPicture: string})> = ({leftText, leftPicture, rightText, rightPicture}) => {
-  const [xCoor, setXCoor] = useState(0);
+
+
+const SwipeCard: React.FC<({leftElement: any, rightElement: any})> = ({leftElement, rightElement}) => {
+  const [xCoor, setXCoor] = useState(295);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
   const mouseHandler = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -15,16 +17,12 @@ const SwipeCard: React.FC<({leftText: string, leftPicture: string, rightText: st
     console.log(e.clientX);
   }
   return (
-    <div ref={wrapperRef} className="swipeCardWrapper" onMouseMove={mouseHandler}>
+    <div ref={wrapperRef} className="swipeCardWrapper" onMouseMove={mouseHandler} onMouseLeave={() => setXCoor(295)}>
       <div className="swipeCardLayerBottom"> 
-        <h1>
-          {leftText}
-        </h1>
+        {leftElement}
       </div>
       <div style={{width: `${xCoor}px`}} className="swipeCardLayerTop">
-        <h1>
-          {rightText}
-        </h1>
+        {rightElement}
       </div>
       <div style={{left:`${xCoor}px` }} className="swipeDivider" />
     </div>

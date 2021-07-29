@@ -23,7 +23,7 @@
 }
 
 .finished {
-  background: linear-gradient(45deg, var(--halfway) 0 30%, var(--alt-text) 70% 100%);
+  background: linear-gradient(45deg, var(--grey-background) 0 30%, var(--alt-text) 70% 100%);
   background-size: 400% 400%;
   background-position: 100% 0%;
   animation: gradient 1000ms linear 1;

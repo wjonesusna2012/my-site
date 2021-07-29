@@ -66,6 +66,11 @@ nav ul {
   height: 2em;
 }
 
+nav ul {
+  text-decoration: none;
+  color: inherit;
+}
+
 nav ul li {
   padding: 0 10px;
   height: 2em;
@@ -138,14 +143,19 @@ div .unselected {
 .firstLetterEmphasized {
   display: block;
   font-size: 14px;
+  color: var(--grey-background);
 }
 
 #NameDisplay:hover > * {
-  font-weight: bolder;
   cursor: pointer;
 }
 
 .firstLetterEmphasized::first-letter {
   font-size: 20px;
-  color: var(--grey-background);
+  color: black;
+}
+
+.NavSubItem a {
+  color: inherit;
+  text-decoration: inherit;
 }
