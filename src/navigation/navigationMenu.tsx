@@ -1,6 +1,5 @@
 import React from 'react';
-import _ from 'lodash';
-import { menuElements, NavigationGridElement } from './constants';
+import { menuElements } from './constants';
 import GridElement from './gridElement';
 import NameRandomizer from './nameRandomizer';
 import Logo from '../images/logo.png';
@@ -24,7 +23,7 @@ const NavigationMenu: React.FunctionComponent = () => {
         </nav>
       </div>
       <div className="NavFlexItemStatic" style={{width: '200px', display: 'flex', justifyContent: 'center'}}>
-        <img style={{display: 'block', padding: '0px 10px', height: '2em', width: '3em'}} src={Logo} />
+        <img alt="Logo" style={{display: 'block', padding: '0px 10px', height: '2em', width: '3em'}} src={Logo} />
       </div>
     </div>
   );

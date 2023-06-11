@@ -17,7 +17,6 @@ const ScrollCard: React.FC<({items: Array<{image: string, description: string, l
   useEffect(() => {
     setCurrentCard(0);
   }, [items]);
-  console.log(items, currentCard);
   return (
     <div className="CardDescriptionContainer">
       <Card 
@@ -27,7 +26,12 @@ const ScrollCard: React.FC<({items: Array<{image: string, description: string, l
         changeCardRight={changeCurrentCardBoundedRight} 
         expandDescription={toggleDescription}
       />
-      <div className={`LongCardDescription${expandDesc ? '' : 'Hidden'}`}>
+      <div 
+        className={`LongCardDescription${expandDesc ? '' : 'Hidden'}`} 
+        onClick={() => { 
+          setExpandedDesc(false)
+        }}
+      >
         <div className={`CardDescriptionFlexContainer`}>
           <div className={`CardDescriptionContainer`}>
             {items[currentCard].longDescription}

@@ -1,11 +1,11 @@
 import nodejs from '../images/nodejs.png';
 import navsea08 from '../images/navsea08.jpeg';
-import python from '../images/python.svg';
+import python from '../images/javascript.png';
 import javascript from '../images/javascript.png';
 import html5 from '../images/html5.png';
 import ethereum from '../images/ethereum.png';
 import solidity from '../images/solidity.png';
-import css3 from '../images/css.png';
+// import css3 from '../images/css.png';
 import reactjs from '../images/react.svg';
 import spring from '../images/spring.png';
 import jest from '../images/jest.png';

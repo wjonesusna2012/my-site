@@ -30,7 +30,7 @@ const defaultContextProps: MyThemeProps = {
 
 export const MyContext = React.createContext<MyContextProps | undefined>(undefined);
 
-const ThemeProvider: React.FC = ({children}) => {
+const ThemeProvider: React.FC<{children: React.ReactNode}> = ({ children }) => {
   const [selectedObject, setSelected] = useState<MyThemeProps>(defaultContextProps);
 
   return (

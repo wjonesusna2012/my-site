@@ -14,7 +14,6 @@ const SwipeCard: React.FC<({leftElement: any, rightElement: any})> = ({leftEleme
         setXCoor(e.clientX - boundedX.left - 5);
       }
     }
-    console.log(e.clientX);
   }
   return (
     <div ref={wrapperRef} className="swipeCardWrapper" onMouseMove={mouseHandler} onMouseLeave={() => setXCoor(295)}>
