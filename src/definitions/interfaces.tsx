@@ -4,7 +4,8 @@ export interface SwipeDataElement {
   icon: string, 
   description: string, 
   title: string, 
-  improvement: string
+  improvement: string,
+  startDate?: Date,
 };
 
 export interface SwipeAssemblyProps {
@@ -17,6 +18,7 @@ export interface SwipeAssemblyGridUnitProps {
   description: string, 
   title: string, 
   improvement: string
+  startDate?: Date,
 };
 
 export interface SwipeAssemblyGridDataProps {

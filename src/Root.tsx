@@ -8,11 +8,12 @@ import NavigationMenu from './navigation/navigationMenu';
 import ScrollCard from './scrollCard/scrollCard';
 import ItemsObject from './scrollCard/constants';
 // import Ocean from './images/Ocean.jpg';
-import { SwipeAssemblyTestData } from './textFiles/skills';
+import { SwipeAssemblyTestData, SwiperProfessionalCerts } from './textFiles/skills';
 import { Outlet } from 'react-router-dom';
 import WorkCardList from './workCards/WorkCardList';
 import Dialer from './dialer/dialer';
 import LandingPage from './isa/LandingPage';
+import { navyWorkCardDetails, workCardDetails } from './workCards/workCardInput';
 // const testItems = [{ description: 'Default Ocean', image: Ocean }];
 
 const Layout = () => {
@@ -53,11 +54,11 @@ const Root = () => {
           children: [
             {
               path: '/work/fullstack',
-              element: <WorkCardList />,
+              element: <WorkCardList workCardDetails={workCardDetails}/>,
             }, 
             {
               path: '/work/navy',
-              element: <ScrollCard items={ItemsObject['WorkNavyItems']}/>
+              element: <WorkCardList workCardDetails={navyWorkCardDetails}/>,
             }
             
           ]
@@ -71,7 +72,7 @@ const Root = () => {
             },
             {
               path: "/skills/accredations",
-              element: <SwipeAssembly swipeData={SwipeAssemblyTestData.swipeData} />
+              element: <SwipeAssembly swipeData={SwiperProfessionalCerts} />
             }
           ]
         }

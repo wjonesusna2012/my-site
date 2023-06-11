@@ -3,6 +3,7 @@ import _ from 'lodash';
 import SwipeCard from './swipeCard';
 
 import {  SwipeAssemblyProps,  SwipeAssemblyGridDataProps } from '../definitions/interfaces';
+import { Grid, Typography } from '@mui/material';
 
 const StarView: React.FC<({starRating: number})> = ({ starRating }) => {
   const starList = [];
@@ -51,41 +52,45 @@ const SwipeAssembly: React.FC<SwipeAssemblyProps> = ({ swipeData }) => {
       description: sD.description,
       title: sD.title,
       improvement: sD.improvement,
+      startDate: sD.startDate,
     });
   });
 
   return (
     <>
+      <Grid container spacing={3}>
       {
         optionGroups.map(oG => {
           return (
             <>
-            <div>{oG}</div>
-            <div className="flexRow">
               {
                 optionOrganizedData[oG].map(sD => {
                   return (
-                    <div style={{width: '300px', height: '300px', padding: '10px'}}>
+                    <Grid item xs={6} md={4} xl={3}>
                       <SwipeCard 
+                        title={oG}
+                        dateRange={sD?.startDate ?? new Date('02-01-1990')}
+                        description={sD.description}
                         rightElement={
                           <Descriptor 
                             size={300} 
-                            description={sD.description} 
+                            description={sD.title} 
                             icon={sD.icon}
                           />
                         } 
                         leftElement={
                           <StarView starRating={sD.rating}/>
                         } 
+                        detailText={sD.improvement}
                       />
-                    </div>
+                    </Grid>
                   )
               })}
-          </div>
           </>
           )
         })
       }
+      </Grid>
     </>
   )
 };

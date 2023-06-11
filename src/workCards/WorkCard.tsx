@@ -1,7 +1,8 @@
 import React from 'react';
-import { Typography, Card, ListItem, CardContent, CardHeader, CardMedia, List, ListItemText, ListItemIcon } from '@mui/material';
+import { Typography, Card, ListItem, CardContent, Link, CardHeader, CardMedia, List, ListItemText, ListItemIcon } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import Check from '@mui/icons-material/Check';
+import { OpenInNew } from '@mui/icons-material';
 
 export interface WorkCardProps {
   title: string;
@@ -26,6 +27,11 @@ const WorkCard: React.FC<WorkCardProps> = ({
         title={title}
         subheader={durationString}
         avatar={<Avatar src={thumbnailSource} />}
+        action={
+          <Link href="www.google.com">
+            <OpenInNew />
+          </Link>
+        }
       />
       <CardMedia 
         component="img"

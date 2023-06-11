@@ -15,7 +15,7 @@ import { SwipeAssemblyProps } from '../definitions/interfaces';
 export const SwipeAssemblyTestData: SwipeAssemblyProps = {
   swipeData: [
     {
-      optionGroup: 'Frameworks and mark-ups',
+      optionGroup: 'Framework',
       rating: 3,
       icon: nodejs,
       description: 'Node.js',
@@ -23,23 +23,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       improvement: 'Improvement scheme 1',
     },
     {
-      optionGroup: 'Professional Certifications',
-      rating: 5,
-      icon: navsea08,
-      description: 'Nuclear Engineering Officer',
-      title: 'Nuclear Engineering Officer',
-      improvement: 'Improvement scheme 1',
-    },
-    {
-      optionGroup: 'Professional Certifications',
-      rating: 5,
-      icon: charteredfinancialanalyst,
-      description: 'CFA Institute Program',
-      title: 'CFA Institute Program',
-      improvement: 'Improvement scheme 2',
-    },
-    {
-      optionGroup: 'Frameworks and mark-ups',
+      optionGroup: 'Framework',
       rating: 4,
       icon: reactjs,
       description: 'React.js',
@@ -47,7 +31,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       improvement: 'Improvement scheme 1',
     },
     {
-      optionGroup: 'Frameworks and mark-ups',
+      optionGroup: 'Framework',
       rating: 2,
       icon: spring,
       description: 'Spring',
@@ -55,7 +39,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       improvement: 'Improvement scheme 1',
     },
     {
-      optionGroup: 'Frameworks and mark-ups',
+      optionGroup: 'Framework',
       rating: 2,
       icon: jest,
       description: 'Jest',
@@ -63,7 +47,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       improvement: 'Improvement scheme 1',
     },
     {
-      optionGroup: 'Programming and scripting languages',
+      optionGroup: 'Programming Language (General Use)',
       rating: 3,
       icon: python,
       description: 'Python',
@@ -71,7 +55,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       improvement: 'Improvement scheme 1',
     },
     {
-      optionGroup: 'Programming and scripting languages',
+      optionGroup: 'Programming Language (General Use)',
       rating: 4,
       icon: javascript,
       description: 'Javascript',
@@ -79,7 +63,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       improvement: 'Improvement scheme 1',
     },
     {
-      optionGroup: 'Programming and scripting languages',
+      optionGroup: 'Scripting Languages',
       rating: 4,
       icon: html5,
       description: 'HTML 5 and CSS',
@@ -87,7 +71,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       improvement: 'Improvement scheme 1',
     },
     {
-      optionGroup: 'Programming and scripting languages',
+      optionGroup: 'Programming Language',
       rating: 4,
       icon: solidity,
       description: 'Solidity',
@@ -95,7 +79,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       improvement: 'Improvement scheme 1',
     },
     {
-      optionGroup: 'Programming and scripting languages',
+      optionGroup: 'Blockchain Standard',
       rating: 4,
       icon: ethereum,
       description: 'Ethereum',
@@ -104,3 +88,32 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
     },
   ]
 };
+export const SwiperProfessionalCerts = [
+  {
+    optionGroup: 'Professional Certification',
+    rating: 5,
+    icon: navsea08,
+    description: 'Nuclear Engineering Officer',
+    title: 'Nuclear Engineering Officer',
+    improvement: 'Improvement scheme 1',
+    startDate: new Date('06-01-2015'),
+  },
+  {
+    optionGroup: 'Professional Certifications',
+    rating: 5,
+    icon: charteredfinancialanalyst,
+    description: 'CFA Institute Program',
+    title: 'CFA Institute Program',
+    improvement: 'Improvement scheme 2',
+    startDate: new Date('10-21-2022'),
+  },
+  {
+    optionGroup: 'Professional Certifications',
+    rating: 5,
+    icon: charteredfinancialanalyst,
+    description: 'eCornell Machine Learning and AI',
+    title: 'eCornell Machine Learning and AI',
+    improvement: 'Improvement scheme 2',
+    startDate: new Date('04-01-2022'),
+  },
+];
