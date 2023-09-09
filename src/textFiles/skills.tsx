@@ -21,6 +21,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       description: 'Node.js',
       title: 'Node.js',
       improvement: 'Improvement scheme 1',
+      startDate: new Date('03-01-2019'),
     },
     {
       optionGroup: 'Framework',
@@ -29,6 +30,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       description: 'React.js',
       title: 'React.js',
       improvement: 'Improvement scheme 1',
+      startDate: new Date('03-01-2019'),
     },
     {
       optionGroup: 'Framework',
@@ -37,6 +39,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       description: 'Spring',
       title: 'Spring',
       improvement: 'Improvement scheme 1',
+      startDate: new Date('12-01-2019'),
     },
     {
       optionGroup: 'Framework',
@@ -45,6 +48,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       description: 'Jest',
       title: 'Jest',
       improvement: 'Improvement scheme 1',
+      startDate: new Date('12-01-2019'),
     },
     {
       optionGroup: 'Programming Language (General Use)',

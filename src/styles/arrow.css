@@ -1,6 +1,6 @@
 :root {
   --main-background: #5CDB95;
-  --main-text: #EDF5E1;
+  --main-text: #FFFFFF;
   --alt-text: #05386B;
   --highlight: #379683;
   --light-highlight: #8EE4AF;
@@ -15,20 +15,20 @@
 }
 
 .arrowContainer {
-  width: 100%; 
+  width: 100%;
   height: 100%;
-  cursor: pointer; 
+  cursor: pointer;
   position: absolute;
 }
 
 .arrow {
-  position: absolute; 
+  position: absolute;
   left: 30%;
-  bottom: 0;  
-  margin-left:0px; 
-  width: 12px; 
-  height: 12px; 
-  background-size: contain; 
+  bottom: 0;
+  margin-left:0px;
+  width: 12px;
+  height: 12px;
+  background-size: contain;
   top: 15px;
 }
 .second {
@@ -53,19 +53,19 @@
 
 @keyframes bounceAlpha {
   0% {
-    opacity: 1; 
+    opacity: 1;
     transform: translateX(0px) scale(1);
   }
   25%{
-    opacity: 0; 
+    opacity: 0;
     transform:translateX(10px) scale(0.9);
   }
   26%{
-    opacity: 0; 
+    opacity: 0;
     transform:translateX(-10px) scale(0.9);
   }
   55% {
-    opacity: 1; 
+    opacity: 1;
     transform: translateX(0px) scale(1);
   }
 }

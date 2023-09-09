@@ -5,10 +5,10 @@ import { CardContent, Card, Container, CardHeader, Button, CardActions, Typograp
 
 
 const SwipeCard: React.FC<({
-  leftElement: any, 
-  rightElement: any, 
-  title: string, 
-  dateRange: Date, 
+  leftElement: any,
+  rightElement: any,
+  title: string,
+  dateRange: Date,
   detailText: string,
   description: string,
 })> = ({title, description, dateRange, leftElement, rightElement, detailText}) => {
@@ -26,15 +26,18 @@ const SwipeCard: React.FC<({
   }
   return (
     <Card>
-      <CardHeader 
+      <CardHeader
         title={title}
         subheader={"Since " + dateRange.toLocaleDateString()}
       />
       <CardContent>
-          <div style={{ display: 'flex', width: '100%', justifyContent: 'space-around' }}>
-            <div style={{ flex: '1 0 0' }}>
+          <div style={{
+              display: 'flex',
+              width: '100%',
+              justifyContent: 'center'
+            }}>
               <div ref={wrapperRef} className="swipeCardWrapper" onMouseMove={mouseHandler} onMouseLeave={() => setXCoor(295)}>
-                <div className="swipeCardLayerBottom"> 
+                <div className="swipeCardLayerBottom">
                   {leftElement}
                 </div>
                 <div style={{width: `${xCoor}px`}} className="swipeCardLayerTop">
@@ -42,7 +45,6 @@ const SwipeCard: React.FC<({
                 </div>
                 <div style={{left:`${xCoor}px` }} className={`swipeDivider${xCoor === 295 ? 'Invisible' : ''}`} />
               </div>
-            </div>
           </div>
         <Typography>
           {description}

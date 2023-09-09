@@ -1,30 +1,39 @@
 import React from 'react';
 import IsAComponent from './isAComponent';
 const adjectivesList = [
-  'a Blockchain Guru',
-  'a Bouldering Expert',
-  'an Innovative Leader',
-  'a Full-Stack Developer',
+  'a Blockchain Bandito',
+  'an Express Expert',
+  'a Fluent Financial Analyst',
+  'a Full-Stack Sage',
+  'a Machine Language Mentor',
+  'a MySQL Maestro',
+  'a Navy Submarine Veteran',
+  'a Node.js Navigator',
+  'a Nuclear Engineer',
+  'a Python Practitioner',
+  'a React Renegade',
+  'a Rock Climbing Cavalier',
+  'a Saavy Salsero',
 ];
 const LandingPage = () => {
   return (
-    <div style={{ 
-      position: 'static', 
-      width: "70%", 
-      maxHeight: "50%", 
-      left: "15%", 
-      top: "25%",
-      border: "3px solid grey",
-      borderRadius: 25,
+    <div style={{
       overflow: 'hidden',
+      position: 'relative',
+      borderRadius: 10,
+      top: '10em',
+      left: '10%',
+      opacity: '0.85',
+      width: '80%',
     }}>
       <IsAComponent
         name="William Jones"
         adjectives={adjectivesList}
-        cursorInterval={400}
-        typingInterval={150}
+        cursorInterval={800}
+        typingInterval={40}
         startFlashes={2}
-        endFlashes={1}
+        endFlashes={3}
+        continuous
       />
     </div>
   )

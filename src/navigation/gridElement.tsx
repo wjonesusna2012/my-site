@@ -24,23 +24,23 @@ const GridElement: React.FC<GridElementProps> = ({elements, elementName, element
     }
   };
   return (
-    <li 
-      className={`NavFlexItemStatic ${elementName === selected.expandedMenu ? 'Expanded' : 'NotExpanded'} ${selected.selectedMenu === elementName ? 'SelectedSubItem' : ''}`} 
+    <li
+      className={`NavFlexItemStatic ${elementName === selected.expandedMenu ? 'Expanded' : 'NotExpanded'} ${selected.selectedMenu === elementName ? 'SelectedSubItem' : ''}`}
       onClick={onClickHandler}
     >
       {elementText}
       {elementName === selected.expandedMenu ? (<div className="NavSubItem">
-        {elements.map(e => { 
+        {elements.map(e => {
         return (
+          <Link to={`${prependedPath}${e.elementPath}`}>
             <div id={e.elementName} onClick={(m: React.MouseEvent<HTMLDivElement>) => {
                 m.stopPropagation();
                 setSelected({selected: { expandedMenu: '', selectedElement: e.elementName, selectedMenu: elementName }});
               }}
               className={`SubMenuItem ${selected.selectedElement === e.elementName ? 'selected' : 'unselected'}`}>
-              <Link to={`${prependedPath}${e.elementPath}`}>
                 {e.elementText}
-              </Link>
             </div>
+          </Link>
         );
         })}
         </div>) : ''}

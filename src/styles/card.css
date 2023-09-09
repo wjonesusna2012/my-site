@@ -4,7 +4,7 @@ img {
 
 :root {
   --main-background: #5CDB95;
-  --main-text: #EDF5E1;
+  --main-text: #FFFFFF;
   --alt-text: #05386B;
   --highlight: #379683;
   --light-highlight: #8EE4AF;
@@ -35,7 +35,7 @@ img {
 }
 
 .ContainerNotHovered {
-  opacity: 0; 
+  opacity: 0;
 }
 
 .CardDescription:hover {

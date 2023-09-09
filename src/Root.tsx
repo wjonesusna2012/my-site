@@ -13,14 +13,34 @@ import { Outlet } from 'react-router-dom';
 import WorkCardList from './workCards/WorkCardList';
 import Dialer from './dialer/dialer';
 import LandingPage from './isa/LandingPage';
+import Background from './images/ClimbingBackground.png';
 import { navyWorkCardDetails, workCardDetails } from './workCards/workCardInput';
 // const testItems = [{ description: 'Default Ocean', image: Ocean }];
 
 const Layout = () => {
   return (
-    <div className="App" style={{ width: "100%", height: "100%", position: 'relative' }}>
+    <div className="App" style={{
+        width: "100%",
+        height: "100%",
+        position: 'relative',
+        display: 'flex',
+        flexDirection: 'column',
+      }}>
       <NavigationMenu />
-      <Outlet />
+      <div
+          style={{
+            overflowY: 'scroll',
+            backgroundImage: `url(${Background})`,
+            backgroundColor: 'var(--alt-text)',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            flex: '1 0 0',
+          }}
+      >
+        <div style={{ opacity: 0.95 }}>
+          <Outlet />
+        </div>
+      </div>
       <Dialer />
     </div>
   )
@@ -46,7 +66,7 @@ const Root = () => {
               path: '/about/education',
               element: <ScrollCard items={ItemsObject['AboutEducationItems']}/>
             }
-            
+
           ]
         },
         {
@@ -55,12 +75,12 @@ const Root = () => {
             {
               path: '/work/fullstack',
               element: <WorkCardList workCardDetails={workCardDetails}/>,
-            }, 
+            },
             {
               path: '/work/navy',
               element: <WorkCardList workCardDetails={navyWorkCardDetails}/>,
             }
-            
+
           ]
         },
         {
