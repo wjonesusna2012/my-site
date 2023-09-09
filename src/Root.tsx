@@ -56,46 +56,29 @@ const Root = () => {
             <LandingPage />
         },
         {
-          path: "/about",
-          children: [
-            {
-              path: '/about/hobbies',
-              element: <ScrollCard items={ItemsObject['AboutHobbiesItems']}/>
-            },
-            {
-              path: '/about/education',
-              element: <ScrollCard items={ItemsObject['AboutEducationItems']}/>
-            }
-
-          ]
+          path: '/hobbies',
+          element: <ScrollCard items={ItemsObject['AboutHobbiesItems']}/>
         },
         {
-          path: "/work",
-          children: [
-            {
-              path: '/work/fullstack',
-              element: <WorkCardList workCardDetails={workCardDetails}/>,
-            },
-            {
-              path: '/work/navy',
-              element: <WorkCardList workCardDetails={navyWorkCardDetails}/>,
-            }
-
-          ]
+          path: '/education',
+          element: <ScrollCard items={ItemsObject['AboutEducationItems']}/>
+        },
+        {
+          path: '/fullstack',
+          element: <WorkCardList workCardDetails={workCardDetails}/>,
+        },
+        {
+          path: '/navy',
+          element: <WorkCardList workCardDetails={navyWorkCardDetails}/>,
         },
         {
           path: "/skills",
-          children: [
-            {
-              path: "/skills/skills",
-              element: <SwipeAssembly swipeData={SwipeAssemblyTestData.swipeData} />
-            },
-            {
-              path: "/skills/accredations",
-              element: <SwipeAssembly swipeData={SwiperProfessionalCerts} />
-            }
-          ]
-        }
+          element: <SwipeAssembly swipeData={SwipeAssemblyTestData.swipeData} />
+        },
+        {
+          path: "/accredations",
+          element: <SwipeAssembly swipeData={SwiperProfessionalCerts} />
+        },
       ]
     },
   ]);

@@ -1,5 +1,5 @@
 import Climbing from '../images/Climbing.jpg';
-import Salsa from '../images/Salsa.jpg';
+import Salsa from '../images/Salsa.jpeg';
 import DIY from '../images/DIY.jpg';
 import USNA from '../images/usna.jpg';
 import Helena from '../images/Helena.jpg';
@@ -11,54 +11,54 @@ import DoItYourself from '../textFiles/doItYourself';
 
 const itemObject = {
   'AboutHobbiesItems': [
-    { 
+    {
       description: ClimbingDescription.shortDescription,
-      image: Climbing, 
+      image: Climbing,
       longDescription: ClimbingDescription.longDescription,
     },
-    { 
-      description: DancingDescription.shortDescription, 
+    {
+      description: DancingDescription.shortDescription,
       image: Salsa,
       longDescription: DancingDescription.longDescription,
     },
-    { 
-      description: DoItYourself.shortDescription, 
+    {
+      description: DoItYourself.shortDescription,
       image: DIY,
       longDescription: DoItYourself.longDescription,
      },
   ],
   'AboutEducationItems': [
-    { 
-      description: SchoolEducationDescription.shortDescription, 
+    {
+      description: SchoolEducationDescription.shortDescription,
       image: USNA,
       longDescription: SchoolEducationDescription.longDescription,
     },
-    { 
-      description: SubmarineEducationDescription.shortDescription, 
+    {
+      description: SubmarineEducationDescription.shortDescription,
       image: Helena,
       longDescription: SubmarineEducationDescription.longDescription,
     },
   ],
   'WorkFullstackItems': [
-    { 
-      description: SchoolEducationDescription.shortDescription, 
+    {
+      description: SchoolEducationDescription.shortDescription,
       image: USNA,
       longDescription: SchoolEducationDescription.longDescription,
     },
-    { 
-      description: SubmarineEducationDescription.shortDescription, 
+    {
+      description: SubmarineEducationDescription.shortDescription,
       image: Helena,
       longDescription: SubmarineEducationDescription.longDescription,
     },
   ],
   'WorkNavyItems': [
-    { 
-      description: SchoolEducationDescription.shortDescription, 
+    {
+      description: SchoolEducationDescription.shortDescription,
       image: USNA,
       longDescription: SchoolEducationDescription.longDescription,
     },
-    { 
-      description: SubmarineEducationDescription.shortDescription, 
+    {
+      description: SubmarineEducationDescription.shortDescription,
       image: Helena,
       longDescription: SubmarineEducationDescription.longDescription,
     },

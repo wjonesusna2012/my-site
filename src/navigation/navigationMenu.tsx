@@ -12,12 +12,10 @@ const NavigationMenu: React.FunctionComponent = () => {
           <ul>
             {menuElements.map((element) => (
               <GridElement
-                elements={element.menuElementArray}
-                key={`GridElement${element.menuElementName}`}
-                elementText={element.menuElementText}
-                elementName={element.menuElementName}
-                prependedPath={element.menuElementPath}
-              /> 
+                key={`GridElement${element.elementText}`}
+                elementText={element.elementText}
+                prependedPath={element.elementPath}
+              />
             ))}
           </ul>
         </nav>
