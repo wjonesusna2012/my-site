@@ -1,5 +1,4 @@
 import type { WorkCardProps } from './WorkCard';
-import LinkedIn from '../images/Github.png';
 import JPMorgan from '../images/jpmorgan.jpeg';
 import JPMorganBackground from '../images/jpmorganbackground.jpeg';
 import Syncfab from '../images/syncfab.jpeg';
@@ -9,13 +8,12 @@ import SearchSideBackground from '../images/SearchSideBackground.jpeg';
 import Navy from '../images/navy.jpeg';
 import NPTUBackground from '../images/nptubackground.jpeg';
 import NNPTCBackground from '../images/nnptcbackground.jpeg';
-import HelenaBackground from '../images/helenabackground.jpeg';
 import CRABackground from '../images/crabackground.jpg';
 import OperationsBackground from '../images/operationsbackground.jpeg';
 
-import Ocean from '../images/Ocean.jpg';
 export const workCardDetails: WorkCardProps[] = [
   {
+    externalLink: 'https://syncfab.com',
     title: 'Syncfab - Lead Software Engineer',
     durationString: `November 2022 - Present`,
     thumbnailSource: Syncfab,
@@ -27,6 +25,7 @@ export const workCardDetails: WorkCardProps[] = [
     ],
   },
   {
+    externalLink: 'https://searchside.com',
     title: 'SearchSide - Lead Engineer',
     durationString: `March 2023 - Present`,
     thumbnailSource: SearchSide,
@@ -38,6 +37,7 @@ export const workCardDetails: WorkCardProps[] = [
     ],
   },
   {
+    externalLink: 'https://www.jpmorgan.com/onyx/index',
     title: 'JP Morgan & Chase - Senior Associate Software Developer',
     durationString: `April 2019 - March 2023`,
     thumbnailSource: JPMorgan,
@@ -52,6 +52,7 @@ export const workCardDetails: WorkCardProps[] = [
 ]
 export const navyWorkCardDetails: WorkCardProps[] = [
   {
+    externalLink: 'https://www.navsea.navy.mil/Home/NPTU/Charleston/',
     title: 'Nuclear Power Training Unit - Shift Engineer, MTS 635',
     durationString: `November 2016 - March 2019`,
     thumbnailSource: Navy,
@@ -63,6 +64,7 @@ export const navyWorkCardDetails: WorkCardProps[] = [
     ],
   },
   {
+    externalLink: 'https://www.sublant.usff.navy.mil/SSN725/',
     title: 'US Helena - Operations Officer and Diving Officer',
     durationString: `May 2015 - November 2016`,
     thumbnailSource: Navy,
@@ -74,6 +76,7 @@ export const navyWorkCardDetails: WorkCardProps[] = [
     ],
   },
   {
+    externalLink: 'https://www.sublant.usff.navy.mil/SSN725/',
     title: 'US Helena - Chemisry and Radiological Controls Assistant',
     durationString: `November 2013 - May 20145`,
     thumbnailSource: Navy,
@@ -85,6 +88,7 @@ export const navyWorkCardDetails: WorkCardProps[] = [
     ],
   },
   {
+    externalLink: 'https://www.navsea.navy.mil/Home/NNPTC/',
     title: 'Student - NNPTC and NPTU',
     durationString: `June 2012 - November 2013`,
     thumbnailSource: Navy,

@@ -16,6 +16,7 @@ import { SwipeAssemblyProps } from '../definitions/interfaces';
 export const SwipeAssemblyTestData: SwipeAssemblyProps = {
   swipeData: [
     {
+      externalLink: 'https://nodejs.org/en',
       optionGroup: 'Framework',
       rating: 3,
       icon: nodejs,
@@ -25,6 +26,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       startDate: new Date('03-01-2019'),
     },
     {
+      externalLink: 'https://react.dev',
       optionGroup: 'Framework',
       rating: 4,
       icon: reactjs,
@@ -34,6 +36,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       startDate: new Date('03-01-2019'),
     },
     {
+      externalLink: 'https://spring.io',
       optionGroup: 'Framework',
       rating: 2,
       icon: spring,
@@ -43,6 +46,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       startDate: new Date('12-01-2019'),
     },
     {
+      externalLink: 'https://storybook.js.org',
       optionGroup: 'Framework',
       rating: 4,
       icon: storybook,
@@ -52,6 +56,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       startDate: new Date('12-01-2019'),
     },
     {
+      externalLink: 'https://jestjs.io',
       optionGroup: 'Framework',
       rating: 2,
       icon: jest,
@@ -61,6 +66,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       startDate: new Date('12-01-2019'),
     },
     {
+      externalLink: 'https://python.org',
       optionGroup: 'Language',
       rating: 3,
       icon: python,
@@ -70,6 +76,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       startDate: new Date('11-01-2021'),
     },
     {
+      externalLink: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
       optionGroup: 'Language',
       rating: 4,
       icon: javascript,
@@ -79,6 +86,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       startDate: new Date('03-01-2019'),
     },
     {
+      externalLink: 'https://developer.mozilla.org/en-US/docs/Glossary/HTML5',
       optionGroup: 'Language',
       rating: 4,
       icon: html5,
@@ -88,6 +96,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       startDate: new Date('03-01-2019'),
     },
     {
+      externalLink: 'https://soliditylang.org',
       optionGroup: 'Language',
       rating: 4,
       icon: solidity,
@@ -97,6 +106,7 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       startDate: new Date('03-01-2019'),
     },
     {
+      externalLink: 'https://ethereum.org',
       optionGroup: 'Standard',
       rating: 4,
       icon: ethereum,
@@ -109,15 +119,17 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
 };
 export const SwiperProfessionalCerts = [
   {
+    externalLink: 'https://navalnuclearlab.energy.gov/nuclear-propulsion-program/',
     optionGroup: 'Certifications',
     rating: 5,
     icon: navsea08,
-    description: 'Qualified to be the chief engineer for a US Navy Submarine\s nuclear power plant. I was recognized as the distinguished officer for the S5G platform by the head of naval reactors.',
+    description: 'Qualified to be the chief engineer for a US Navy Submarine\'s nuclear power plant. I was recognized as the distinguished officer for the S5G platform by the head of naval reactors.',
     title: 'Nuclear Engineering Officer',
     improvement: '',
     startDate: new Date('06-01-2015'),
   },
   {
+    externalLink: 'https://cfainstitute.org',
     optionGroup: 'Certifications',
     rating: 5,
     icon: charteredfinancialanalyst,
@@ -127,6 +139,7 @@ export const SwiperProfessionalCerts = [
     startDate: new Date('10-21-2022'),
   },
   {
+    externalLink: 'https://ecornell.cornell.edu/certificates/technology/machine-learning/',
     optionGroup: 'Certifications',
     rating: 5,
     icon: ecornell,

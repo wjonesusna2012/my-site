@@ -1,11 +1,12 @@
 export interface SwipeDataElement {
-  optionGroup: string, 
-  rating: number, 
-  icon: string, 
-  description: string, 
-  title: string, 
+  optionGroup: string,
+  rating: number,
+  icon: string,
+  description: string,
+  title: string,
   improvement: string,
   startDate?: Date,
+  externalLink: string,
 };
 
 export interface SwipeAssemblyProps {
@@ -13,11 +14,12 @@ export interface SwipeAssemblyProps {
 };
 
 export interface SwipeAssemblyGridUnitProps {
-  rating: number, 
-  icon: string, 
-  description: string, 
-  title: string, 
+  rating: number,
+  icon: string,
+  description: string,
+  title: string,
   improvement: string
+  externalLink: string,
   startDate?: Date,
 };
 

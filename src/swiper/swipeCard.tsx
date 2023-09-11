@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import '../styles/swiper.css';
-import { CardContent, Card, Chip, CardHeader, Button, CardActions, Typography } from '@mui/material';
-
+import { Link, CardContent, Card, Chip, CardHeader, Button, CardActions, Typography } from '@mui/material';
+import { OpenInNew } from '@mui/icons-material';
 
 
 const SwipeCard: React.FC<({
@@ -12,7 +12,8 @@ const SwipeCard: React.FC<({
   detailText: string,
   description: string,
   chipLabel: string,
-})> = ({title, description, chipLabel, dateRange, leftElement, rightElement, detailText}) => {
+  externalLink: string,
+})> = ({externalLink, title, description, chipLabel, dateRange, leftElement, rightElement, detailText}) => {
   const [expanded, setExpanded] = useState(false);
   const [xCoor, setXCoor] = useState(295);
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -32,6 +33,11 @@ const SwipeCard: React.FC<({
         subheader={"Since " + dateRange.toLocaleDateString('en-us', {year: 'numeric', month: 'long'})}
         avatar={
             <Chip label={chipLabel}/>
+        }
+        action={
+          <Link target="_blank" href={externalLink}>
+            <OpenInNew />
+          </Link>
         }
       />
       <CardContent>

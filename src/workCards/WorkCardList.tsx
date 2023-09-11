@@ -24,6 +24,7 @@ export const WorkCardList: React.FC<WorkCardListProps> = ({workCardDetails}) => 
               mediaSource={wCD.mediaSource}
               workSummary={wCD.workSummary}
               detailList={wCD.detailList}
+              externalLink={wCD.externalLink}
             />
           </Grid>
         )

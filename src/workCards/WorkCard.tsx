@@ -11,29 +11,30 @@ export interface WorkCardProps {
   mediaSource: string;
   workSummary: string;
   detailList: string[];
+  externalLink: string;
 }
-const WorkCard: React.FC<WorkCardProps> = ({ 
+const WorkCard: React.FC<WorkCardProps> = ({
   title,
   durationString,
   thumbnailSource,
   mediaSource,
   workSummary,
   detailList,
-
+  externalLink,
 }) => {
   return (
     <Card>
-      <CardHeader 
+      <CardHeader
         title={title}
         subheader={durationString}
         avatar={<Avatar src={thumbnailSource} />}
         action={
-          <Link href="www.google.com">
+          <Link target="_blank" href={externalLink}>
             <OpenInNew />
           </Link>
         }
       />
-      <CardMedia 
+      <CardMedia
         component="img"
         image={mediaSource}
         height="150"

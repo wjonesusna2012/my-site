@@ -1,13 +1,10 @@
 import React from 'react';
 import './App.css';
 import SwipeAssembly from './swiper/swipeAssembly';
-
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-
 import NavigationMenu from './navigation/navigationMenu';
 import ScrollCard from './scrollCard/scrollCard';
 import ItemsObject from './scrollCard/constants';
-// import Ocean from './images/Ocean.jpg';
 import { SwipeAssemblyTestData, SwiperProfessionalCerts } from './textFiles/skills';
 import { Outlet } from 'react-router-dom';
 import WorkCardList from './workCards/WorkCardList';

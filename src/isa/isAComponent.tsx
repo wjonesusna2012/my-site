@@ -41,7 +41,8 @@ const IsAComponent: React.FC<IsAComponentProps> = ({
   currentStateRef.current = currentState;
   startFsRef.current = startFsCounter;
 
-  const resetWord = () => {
+
+  const resetWord = React.useCallback(() => {
     setStartFs(0);
     setCurrentState(STATES.PRE_FLASH);
     const newRemainingAdjectives = [...remainingAdjectives.slice(0, adjectiveSelected), ...remainingAdjectives.slice(adjectiveSelected + 1)];
@@ -49,7 +50,9 @@ const IsAComponent: React.FC<IsAComponentProps> = ({
     else if (newRemainingAdjectives.length === 0) newRemainingAdjectives.push(...adjectives);
     setRemainingAdjectives(newRemainingAdjectives);
     setAdjectiveSelected(Math.floor(Math.random() * newRemainingAdjectives.length));
-  }
+  }, [adjectiveSelected, remainingAdjectives, adjectives])
+
+  useEffect(() => {
   const constructString: () => JSX.Element = () => {
     switch(currentStateRef.current){
       case STATES.PRE_FLASH:
@@ -119,6 +122,10 @@ const IsAComponent: React.FC<IsAComponentProps> = ({
         );
     }
   }
+    setDisplayString(constructString());
+  }, [startFsCounter, currentState, adjectiveSelected, remainingAdjectives, name]);
+
+  useEffect(() => {
   const incrementCounter = () => {
     switch(currentStateRef.current) {
       case STATES.PRE_FLASH:
@@ -161,12 +168,6 @@ const IsAComponent: React.FC<IsAComponentProps> = ({
         break;
     }
   }
-
-  useEffect(() => {
-    setDisplayString(constructString());
-  }, [constructString, startFsCounter, currentState]);
-
-  useEffect(() => {
     let id: NodeJS.Timeout;
     if (currentStateRef.current !== STATES.POST_FLASHING) {
       id = setTimeout(() => {
@@ -174,7 +175,7 @@ const IsAComponent: React.FC<IsAComponentProps> = ({
       }, (currentStateRef.current === STATES.END_FLASHING || currentStateRef.current === STATES.FLASHING) ? cursorInterval : typingInterval);
     }
    return () => clearTimeout(id);
-  }, [currentState, startFsCounter]);
+  }, [currentState, startFsCounter, cursorInterval, typingInterval, adjectiveSelected, continuous, endFlashes, remainingAdjectives, resetWord, startFlashes]);
 
   return (
     <div className={`banner ${STATES.POST_FLASHING === currentStateRef.current ? 'finished': 'unFinished'}`}onClick={continuous ? () => {} : resetWord}>

@@ -56,6 +56,7 @@ const SwipeAssembly: React.FC<SwipeAssemblyProps> = ({ swipeData }) => {
       title: sD.title,
       improvement: sD.improvement,
       startDate: sD.startDate,
+      externalLink: sD.externalLink,
     });
   });
 
@@ -86,6 +87,7 @@ const SwipeAssembly: React.FC<SwipeAssemblyProps> = ({ swipeData }) => {
                           <StarView starRating={sD.rating}/>
                         }
                         detailText={sD.improvement}
+                        externalLink={sD.externalLink}
                       />
                     </Grid>
                   )
