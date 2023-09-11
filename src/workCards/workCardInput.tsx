@@ -69,7 +69,7 @@ export const navyWorkCardDetails: WorkCardProps[] = [
     durationString: `May 2015 - November 2016`,
     thumbnailSource: Navy,
     mediaSource: OperationsBackground,
-    workSummary: 'Summary for OPS work here',
+    workSummary: 'The operations officer is responsible for coordinating the operations of the ship\'s crew and ensuring the needs of external stakeholders are met. I was also responsible for troubleshooting and integrating several new features in our navigation/fire control system that had not been previously integrated in a fast attack submarine.',
     detailList: [
       'Responsible for planning and certifying the execution of approximately 30 cross-platform operations and coordinating that actions of department heads across 4 departments (Supply, Weapons, Engineering, and Navigation).',
       'Responsible for tracking supply and equipment changes that affect ship\'s weight and balance. Responsible for certifying the ship\'s helmsman and diving officers for operational safety.'
@@ -81,7 +81,7 @@ export const navyWorkCardDetails: WorkCardProps[] = [
     durationString: `November 2013 - May 20145`,
     thumbnailSource: Navy,
     mediaSource: CRABackground,
-    workSummary: 'Summary for CRA work here',
+    workSummary: 'The CRA is overall accountable to the ship\'s engineer for the proper maintenance, surveillance, and auditing of all radiological and chemistry related work on the submarine.',
     detailList: [
       'Responsible for overseeing proper planning and maintenance on any chemically radiologically affected systems.',
       'Responsible for maintaining an audit and surveillance program to identify inefficiencies, assess root causes, and promulgate best practices for a zero-fault-tolerance program.'
