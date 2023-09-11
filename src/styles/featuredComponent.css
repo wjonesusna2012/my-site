@@ -1,6 +1,6 @@
 :root {
   --main-background: #5CDB95;
-  --main-text: #EDF5E1;
+  --main-text: #FFFFFF;
   --alt-text: #05386B;
   --highlight: #379683;
   --light-highlight: #8EE4AF;
@@ -26,14 +26,14 @@
 
 .featuredContainerTitle {
   padding: 10px;
-  border: 1px solid var(--main-text); 
+  border: 1px solid var(--main-text);
   cursor: default;
   font-size: 1.4rem;
 }
 
 .featuredContainerElement {
   padding: 15px 0;
-  border: 1px solid var(--main-text); 
+  border: 1px solid var(--main-text);
   border-top: none;
   cursor: pointer;
   display: grid;

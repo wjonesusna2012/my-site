@@ -8,6 +8,7 @@ interface IsAComponentProps {
   endFlashes: number,
   cursorInterval: number,
   typingInterval: number,
+  continuous: boolean,
 }
 
 const STATES = {
@@ -16,22 +17,24 @@ const STATES = {
   TEXT_WRITING: 3,
   END_FLASHING: 4,
   POST_FLASHING: 5,
+  ERASING: 6,
 }
 
-const IsAComponent: React.FC<IsAComponentProps> = ({ 
+const IsAComponent: React.FC<IsAComponentProps> = ({
   name,
   adjectives,
   startFlashes,
   endFlashes,
   cursorInterval,
   typingInterval,
+  continuous = false,
 }) => {
   const [startFsCounter, setStartFs] = useState(0);
   const [currentState, setCurrentState] = useState(STATES.PRE_FLASH);
-  const [displayString, setDisplayString] = useState(<div><span></span></div>);
+  const [displayString, setDisplayString] = useState(<div><span/></div>);
   const [adjectiveSelected, setAdjectiveSelected] = useState(Math.floor(Math.random() * adjectives.length));
   const [remainingAdjectives, setRemainingAdjectives] = useState(adjectives);
-  
+
   const startFsRef = useRef<number>(0);
   const currentStateRef = useRef<number>(STATES.PRE_FLASH);
 
@@ -53,20 +56,23 @@ const IsAComponent: React.FC<IsAComponentProps> = ({
         return (
           <div>
             {`${name} is `}
+            <br />
             <span className='invisible'>|</span>
           </div>
-        ); 
+        );
       case STATES.FLASHING:
         return (
           <div>
             {`${name} is `}
+            <br />
             <span className={startFsRef.current % 2 === 1 ? 'visible' : 'invisible'}>|</span>
           </div>
-        ); 
+        );
       case STATES.TEXT_WRITING:
         return (
           <div>
             {`${name} is `}
+            <br />
             <span className="visibe">
               {remainingAdjectives[adjectiveSelected].slice(0,startFsRef.current)}{startFsRef.current === 0 ? '' : '|'}
             </span>
@@ -75,7 +81,11 @@ const IsAComponent: React.FC<IsAComponentProps> = ({
       case STATES.END_FLASHING:
         return (
           <div>
-            {`${name} is ${remainingAdjectives[adjectiveSelected]}`}
+            {`${name} is `}
+            <br />
+            <span className="visible">
+              {remainingAdjectives[adjectiveSelected]}
+            </span>
             <span className={startFsRef.current % 2 === 1 ? 'visible' : 'invisible'}>|</span>
           </div>
         );
@@ -83,7 +93,21 @@ const IsAComponent: React.FC<IsAComponentProps> = ({
         return (
           <div>
             {`${name} is ${remainingAdjectives[adjectiveSelected]}`}
+            <br />
+            <span className="visible">
+              {remainingAdjectives[adjectiveSelected]}
+            </span>
             <span className="invisible">|</span>
+          </div>
+        );
+      case STATES.ERASING:
+        return (
+          <div>
+            {`${name} is `}
+            <br />
+            <span className="visibe">
+              {remainingAdjectives[adjectiveSelected].slice(0, 0 - startFsRef.current)}{startFsRef.current === 0 ? '' : '|'}
+            </span>
           </div>
         );
       default:
@@ -119,7 +143,7 @@ const IsAComponent: React.FC<IsAComponentProps> = ({
         break;
       case STATES.END_FLASHING:
         if(startFsRef.current > endFlashes * 2) {
-          setCurrentState(STATES.POST_FLASHING);
+          setCurrentState(continuous ? STATES.ERASING : STATES.POST_FLASHING);
           setStartFs(1);
         } else {
           setStartFs(startFsRef.current + 1);
@@ -128,29 +152,36 @@ const IsAComponent: React.FC<IsAComponentProps> = ({
       case STATES.POST_FLASHING:
         setStartFs(-1);
         break;
+      case STATES.ERASING:
+        if(startFsRef.current > remainingAdjectives[adjectiveSelected].length) {
+            resetWord();
+        } else {
+          setStartFs(startFsRef.current + 1);
+        }
+        break;
     }
   }
 
   useEffect(() => {
     setDisplayString(constructString());
-  }, [startFsCounter, currentState]);
+  }, [constructString, startFsCounter, currentState]);
 
   useEffect(() => {
     let id: NodeJS.Timeout;
     if (currentStateRef.current !== STATES.POST_FLASHING) {
       id = setTimeout(() => {
         incrementCounter();
-      }, (currentStateRef.current === STATES.END_FLASHING || currentStateRef.current === STATES.FLASHING) ? cursorInterval : typingInterval); 
+      }, (currentStateRef.current === STATES.END_FLASHING || currentStateRef.current === STATES.FLASHING) ? cursorInterval : typingInterval);
     }
    return () => clearTimeout(id);
   }, [currentState, startFsCounter]);
 
   return (
-    <div className={`banner ${STATES.POST_FLASHING === currentStateRef.current ? 'finished': 'unFinished'}`} onClick={resetWord}>
+    <div className={`banner ${STATES.POST_FLASHING === currentStateRef.current ? 'finished': 'unFinished'}`}onClick={continuous ? () => {} : resetWord}>
       {displayString}
     </div>
   );
 
-} 
+}
 
 export default IsAComponent;

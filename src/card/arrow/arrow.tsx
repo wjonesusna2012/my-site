@@ -1,13 +1,13 @@
 import React from 'react';
-import '../../styles/arrow.css';
+import '../../styles/card.css';
 
 const Arrow: React.FC<{direction: string, containerHovered: boolean, clickHandler: () => void}> = ({
-    direction, 
+    direction,
     containerHovered,
     clickHandler
   }) => {
   return (
-    <div 
+    <div
       className={`${direction}Arrow round ${containerHovered ? 'Hovered' : 'NotHovered'}`}
       onClick={clickHandler}>
       <div className="arrowContainer">

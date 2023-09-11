@@ -4,10 +4,88 @@ img {
 
 :root {
   --main-background: #5CDB95;
-  --main-text: #EDF5E1;
+  --main-text: #FFFFFF;
   --alt-text: #05386B;
   --highlight: #379683;
   --light-highlight: #8EE4AF;
+}
+
+.round {
+  position: absolute;
+  border: 2px solid var(--main-text);
+  width: 2em;
+  height: 2em;
+  border-radius: 10%;
+}
+
+.arrowContainer {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: absolute;
+}
+
+.arrow {
+  position: absolute;
+  left: 30%;
+  bottom: 0;
+  margin-left:0px;
+  width: 12px;
+  height: 12px;
+  background-size: contain;
+  top: calc(1em - 6px);;
+}
+.second {
+  margin-left: 8px;
+}
+.next {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHN0eWxlPi5zdDB7ZmlsbDojZmZmfTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTMxOS4xIDIxN2MyMC4yIDIwLjIgMTkuOSA1My4yLS42IDczLjdzLTUzLjUgMjAuOC03My43LjZsLTE5MC0xOTBjLTIwLjEtMjAuMi0xOS44LTUzLjIuNy03My43UzEwOSA2LjggMTI5LjEgMjdsMTkwIDE5MHoiLz48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzE5LjEgMjkwLjVjMjAuMi0yMC4yIDE5LjktNTMuMi0uNi03My43cy01My41LTIwLjgtNzMuNy0uNmwtMTkwIDE5MGMtMjAuMiAyMC4yLTE5LjkgNTMuMi42IDczLjdzNTMuNSAyMC44IDczLjcuNmwxOTAtMTkweiIvPjwvc3ZnPg==);
+}
+
+.Hovered {
+  opacity: 0.3;
+  background-color: var(--alt-text);
+}
+
+.Hovered:hover {
+  opacity: 1.0;
+}
+
+.NotHovered {
+  opacity: 0;
+}
+
+@keyframes bounceAlpha {
+  0% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+  25%{
+    opacity: 0;
+    transform:translateX(10px) scale(0.9);
+  }
+  26%{
+    opacity: 0;
+    transform:translateX(-10px) scale(0.9);
+  }
+  55% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
+
+.round:hover .arrow.second {
+  animation-name: bounceAlpha;
+  animation-duration:1.0s;
+  animation-iteration-count: 1;
+  animation-timing-function:linear;
+}
+.round:hover .arrow.first {
+  animation-name: bounceAlpha;
+  animation-duration:1.0s;
+  animation-delay:0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function:linear;
 }
 
 .CardContainer {
@@ -35,7 +113,7 @@ img {
 }
 
 .ContainerNotHovered {
-  opacity: 0; 
+  opacity: 0;
 }
 
 .CardDescription:hover {
@@ -45,15 +123,46 @@ img {
 
 .LeftArrow {
   position: absolute;
-  bottom: 50%;
+  bottom: calc(50% - 1em);
   left: 0;
   transform: scaleX(-1);
 }
 
 .RightArrow {
   position: absolute;
-  bottom: 50%;
+  bottom: calc(50% - 1em);
   right: 0;
+}
+
+
+.ClickForMore {
+    position: absolute;
+    bottom: calc(50% - 0.5em - 2.5px);
+    right: calc(50% - 0.5em - 2.5px);
+    height: 1em;
+    width: 1em;
+    border: 2px solid var(--main-text);
+    transition: border ease-in 200ms;
+    padding: 5px;
+    border-radius: calc(1em - 5px);
+    background-color: var(--alt-text);
+    color: var(--main-text);
+    font-size: 30px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.ClickForMore.NotClickHovered {
+    display: none;
+}
+
+.ClickForMore.ClickHovered {
+    border: 2px solid rgba(255, 255, 255, 255);
+    opacity: 0.3;
+}
+.ClickForMore.ClickHovered:hover {
+    animation: FontSizeChange;
+    opacity: 1.0;
 }
 
 .LongCardDescription {
@@ -77,6 +186,7 @@ img {
 .LongCardDescriptionHidden {
   display: none;
   color: var(--alt-text);
+  animation:
 }
 
 .CardDescriptionFlexContainer {
@@ -95,7 +205,18 @@ img {
   flex-direction: row;
   align-items: center;
 }
-@keyframes ExpandCard {
+@keyframes FontSizeChange {
+    0% {
+        font-size: 12px;
+    }
+    50% {
+        font-size: 18px;
+    }
+    100% {
+        font-size: 12px;
+    }
+}
+@keyframes ExpandCard{
   0% {
     height: 20px;
     width: 0px;

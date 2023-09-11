@@ -1,7 +1,8 @@
 :root {
   --main-background: #5CDB95;
-  --main-text: #EDF5E1;
+  --main-text: #FFFFFF;
   --alt-text: #05386B;
+  --black: #000000;
   --highlight: #379683;
   --grey-background: rgba(111,111,111,0.7);
   --light-highlight: #8EE4AF;
@@ -16,16 +17,16 @@ body {
 }
 
 .NavFlexContainer {
+  opacity: 0.85;
   background-color: var(--alt-text);
   width: 100%;
-  color: var(--main-text); 
+  color: var(--main-text);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  font-size: 22px;
-  height: 2em;
-  border-bottom: 1px solid var(--main-text);
+  font-size: 16px;
+  height: 4em;
 }
 
 .NavFlexItemGrow {
@@ -40,16 +41,8 @@ body {
   cursor: pointer;
 }
 
-.NavSubItem {
-  position: absolute; 
-  min-width: 100%;
-  left: 0;
-  z-index: 100;
-}
-
 .navigationBar {
   margin: 0;
-  height: 2em;
 }
 
 nav ul {
@@ -63,7 +56,6 @@ nav ul {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   padding-inline-start: 0px;
-  height: 2em;
 }
 
 nav ul {
@@ -73,7 +65,6 @@ nav ul {
 
 nav ul li {
   padding: 0 10px;
-  height: 2em;
   line-height: 2em;
   text-align: center;
 }
@@ -96,11 +87,12 @@ nav ul li.NotExpanded::before {
 
 nav ul li.NotExpanded:hover::before {
   width: 70%;
-  transition: width 150ms ease-in;
+  transition: width 200ms ease-in;
 }
 
 nav ul li.SelectedSubItem {
   color: var(--highlight);
+  border-radius: 5px;
 }
 
 div .SubMenuItem {
@@ -113,20 +105,16 @@ div .SubMenuItem {
   color: var(--main-text);
 }
 
-.NavSubItem:first-child {
-  border-top: 1px solid var(--main-text);
-}
-
 @keyframes backPulse {
   0% {
     background-color: var(--alt-text);
-  }    
+  }
   20% {
     background-color: var(--highlight-faded);
   }
   40% {
     background-color: var(--halfway);
-  }    
+  }
   100% {
     background-color: var(--highlight-faded);
   }
@@ -134,6 +122,7 @@ div .SubMenuItem {
 
 div .selected {
   background-color: var(--grey-background);
+
 }
 
 div .unselected {
@@ -143,7 +132,7 @@ div .unselected {
 .firstLetterEmphasized {
   display: block;
   font-size: 14px;
-  color: var(--grey-background);
+  color: var(--main-text);
 }
 
 #NameDisplay:hover > * {
@@ -152,10 +141,10 @@ div .unselected {
 
 .firstLetterEmphasized::first-letter {
   font-size: 20px;
-  color: black;
+  color: var(--black);
 }
 
-.NavSubItem a {
+li a {
   color: inherit;
   text-decoration: inherit;
 }
