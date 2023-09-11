@@ -14,7 +14,7 @@ export const featuredItemsTest = [
   },
   {
     linkText: 'Resume',
-    imageName: <WorkOutline />, 
-    hyperlinkText: 'http://isitchristmas.com',
+    imageName: <WorkOutline />,
+    hyperlinkText: 'https://docs.google.com/document/d/e/2PACX-1vTvV47VB8W5DUN-B-RN7hwSPT7Rm2DUvOhu5Wt3SPZyYeXkhPfbPdF6uuHpxSeXBtxZW7Ai0K53t63Y/pub',
   },
 ];

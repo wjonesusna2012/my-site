@@ -123,7 +123,7 @@ export const SwiperProfessionalCerts = [
     optionGroup: 'Certifications',
     rating: 5,
     icon: navsea08,
-    description: 'Qualified to be the chief engineer for a US Navy Submarine\'s nuclear power plant. I was recognized as the distinguished officer for the S5G platform by the head of naval reactors.',
+    description: 'Qualified to be the chief engineer for a US Navy Submarine\'s nuclear power plant. I was recognized as the distinguished officer for the S6G platform by the head of naval reactors.',
     title: 'Nuclear Engineering Officer',
     improvement: '',
     startDate: new Date('06-01-2015'),
