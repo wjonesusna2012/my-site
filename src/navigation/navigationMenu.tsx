@@ -3,6 +3,7 @@ import { menuElements } from './constants';
 import GridElement from './gridElement';
 import NameRandomizer from './nameRandomizer';
 import Logo from '../images/logo.png';
+import { Link } from 'react-router-dom';
 const NavigationMenu: React.FunctionComponent = () => {
   return (
     <div className="NavFlexContainer">
@@ -21,7 +22,9 @@ const NavigationMenu: React.FunctionComponent = () => {
         </nav>
       </div>
       <div className="NavFlexItemStatic" style={{width: '200px', display: 'flex', justifyContent: 'center'}}>
-        <img alt="Logo" style={{display: 'block', padding: '0px 10px', height: '2em', width: '3em'}} src={Logo} />
+        <Link to="/">
+          <img alt="Logo" style={{display: 'block', padding: '0px 10px', height: '2em', width: '3em'}} src={Logo} />
+        </Link>
       </div>
     </div>
   );

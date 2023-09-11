@@ -56,6 +56,7 @@ const IsAComponent: React.FC<IsAComponentProps> = ({
         return (
           <div>
             {`${name} is `}
+            <br />
             <span className='invisible'>|</span>
           </div>
         );
@@ -63,6 +64,7 @@ const IsAComponent: React.FC<IsAComponentProps> = ({
         return (
           <div>
             {`${name} is `}
+            <br />
             <span className={startFsRef.current % 2 === 1 ? 'visible' : 'invisible'}>|</span>
           </div>
         );
@@ -70,6 +72,7 @@ const IsAComponent: React.FC<IsAComponentProps> = ({
         return (
           <div>
             {`${name} is `}
+            <br />
             <span className="visibe">
               {remainingAdjectives[adjectiveSelected].slice(0,startFsRef.current)}{startFsRef.current === 0 ? '' : '|'}
             </span>
@@ -78,7 +81,11 @@ const IsAComponent: React.FC<IsAComponentProps> = ({
       case STATES.END_FLASHING:
         return (
           <div>
-            {`${name} is ${remainingAdjectives[adjectiveSelected]}`}
+            {`${name} is `}
+            <br />
+            <span className="visible">
+              {remainingAdjectives[adjectiveSelected]}
+            </span>
             <span className={startFsRef.current % 2 === 1 ? 'visible' : 'invisible'}>|</span>
           </div>
         );
@@ -86,6 +93,10 @@ const IsAComponent: React.FC<IsAComponentProps> = ({
         return (
           <div>
             {`${name} is ${remainingAdjectives[adjectiveSelected]}`}
+            <br />
+            <span className="visible">
+              {remainingAdjectives[adjectiveSelected]}
+            </span>
             <span className="invisible">|</span>
           </div>
         );
@@ -93,6 +104,7 @@ const IsAComponent: React.FC<IsAComponentProps> = ({
         return (
           <div>
             {`${name} is `}
+            <br />
             <span className="visibe">
               {remainingAdjectives[adjectiveSelected].slice(0, 0 - startFsRef.current)}{startFsRef.current === 0 ? '' : '|'}
             </span>
@@ -152,7 +164,7 @@ const IsAComponent: React.FC<IsAComponentProps> = ({
 
   useEffect(() => {
     setDisplayString(constructString());
-  }, [startFsCounter, currentState]);
+  }, [constructString, startFsCounter, currentState]);
 
   useEffect(() => {
     let id: NodeJS.Timeout;

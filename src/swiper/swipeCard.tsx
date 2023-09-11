@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import '../styles/swiper.css';
-import { CardContent, Card, Container, CardHeader, Button, CardActions, Typography } from '@mui/material';
+import { CardContent, Card, Chip, CardHeader, Button, CardActions, Typography } from '@mui/material';
 
 
 
@@ -11,7 +11,8 @@ const SwipeCard: React.FC<({
   dateRange: Date,
   detailText: string,
   description: string,
-})> = ({title, description, dateRange, leftElement, rightElement, detailText}) => {
+  chipLabel: string,
+})> = ({title, description, chipLabel, dateRange, leftElement, rightElement, detailText}) => {
   const [expanded, setExpanded] = useState(false);
   const [xCoor, setXCoor] = useState(295);
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -28,7 +29,10 @@ const SwipeCard: React.FC<({
     <Card>
       <CardHeader
         title={title}
-        subheader={"Since " + dateRange.toLocaleDateString()}
+        subheader={"Since " + dateRange.toLocaleDateString('en-us', {year: 'numeric', month: 'long'})}
+        avatar={
+            <Chip label={chipLabel}/>
+        }
       />
       <CardContent>
           <div style={{
@@ -50,18 +54,25 @@ const SwipeCard: React.FC<({
           {description}
         </Typography>
       {
-        expanded && (
-          <Typography>
-            {detailText}
-          </Typography>
+        expanded && detailText !== '' && (
+          <>
+            <Typography style={{ padding: 10, borderRadius: 5, margin: "10px 0", justifyContent: "start", backgroundColor: "var(--alt-text)", color: "var(--main-text)"  }}>
+                Improvement
+            </Typography>
+            <Typography>
+              {detailText}
+            </Typography>
+          </>
         )
       }
       </CardContent>
-      <CardActions>
-        <Button onClick={() => setExpanded(e => !e)}>
-          {expanded ? 'Less' : 'More'}
-        </Button>
-      </CardActions>
+      { detailText !== '' && (
+          <CardActions>
+            <Button onClick={() => setExpanded(e => !e)}>
+              {expanded ? 'Less' : 'More'}
+            </Button>
+          </CardActions>
+      )}
     </Card>
   )
 };

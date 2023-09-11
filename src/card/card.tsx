@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../styles/card.css';
 import Arrow from './arrow/arrow';
+import '../styles/card.css';
 
 interface CardProps {
   description: string,
@@ -15,19 +15,20 @@ const Card: React.FC<CardProps> = ({ description, imageName, changeCardLeft, cha
   return (
     <div className="CardContainer" onMouseOver={() => { setHovered(true)}} onMouseOut={() => { setHovered(false)}}>
       <img alt="Text Here" src={`${imageName}`} onClick={() => expandDescription()} height="500" width="500" />
-      <Arrow 
-        direction="Left" 
-        containerHovered={hovered} 
+      <Arrow
+        direction="Left"
+        containerHovered={hovered}
         clickHandler={changeCardLeft}
       />
-      <Arrow 
-        direction="Right" 
-        containerHovered={hovered} 
+      <Arrow
+        direction="Right"
+        containerHovered={hovered}
         clickHandler={changeCardRight}
       />
-      <div className={`CardDescription ${hovered ? 'ContainerHovered' : 'ContainerNotHovered'}`}>{description}</div> 
+      <span onClick={() => expandDescription()} className={`ClickForMore ${hovered ? 'ClickHovered' : 'NotClickHovered'}`}>+</span>
+      <div className={`CardDescription ${hovered ? 'ContainerHovered' : 'ContainerNotHovered'}`}>{description}</div>
     </div>
   )
-} 
+}
 
 export default Card;

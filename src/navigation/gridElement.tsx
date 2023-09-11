@@ -10,11 +10,11 @@ interface GridElementProps {
 const GridElement: React.FC<GridElementProps> = ({ elementText, prependedPath }) => {
   const { pathname } = useLocation();
   return (
-    <Link to={prependedPath}>
-      <li className={'NavFlexItemStatic' + ' ' +  pathname === prependedPath ? 'Expanded SelectedSubItem' : 'NotExpanded'}>
-          {elementText}
-      </li>
-    </Link>
+    <li className={`NavFlexItemStatic ${pathname === prependedPath ? 'Expanded SelectedSubItem' : 'NotExpanded'}`}>
+      <Link to={prependedPath}>
+        {elementText}
+      </Link>
+    </li>
   );
 };
 

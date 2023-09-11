@@ -25,7 +25,7 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  font-size: 22px;
+  font-size: 16px;
   height: 4em;
 }
 
@@ -39,13 +39,6 @@ body {
   border: none;
   position: relative;
   cursor: pointer;
-}
-
-.NavSubItem {
-  position: absolute;
-  min-width: 100%;
-  left: 0;
-  z-index: 100;
 }
 
 .navigationBar {
@@ -94,11 +87,12 @@ nav ul li.NotExpanded::before {
 
 nav ul li.NotExpanded:hover::before {
   width: 70%;
-  transition: width 150ms ease-in;
+  transition: width 200ms ease-in;
 }
 
 nav ul li.SelectedSubItem {
   color: var(--highlight);
+  border-radius: 5px;
 }
 
 div .SubMenuItem {
@@ -109,10 +103,6 @@ div .SubMenuItem {
   text-align: left;
   white-space: nowrap;
   color: var(--main-text);
-}
-
-.NavSubItem:first-child {
-  border-top: 1px solid var(--main-text);
 }
 
 @keyframes backPulse {
@@ -132,6 +122,7 @@ div .SubMenuItem {
 
 div .selected {
   background-color: var(--grey-background);
+
 }
 
 div .unselected {
@@ -153,7 +144,7 @@ div .unselected {
   color: var(--black);
 }
 
-.NavSubItem a {
+li a {
   color: inherit;
   text-decoration: inherit;
 }
