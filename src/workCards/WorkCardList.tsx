@@ -11,7 +11,6 @@ export const WorkCardList: React.FC<WorkCardListProps> = ({workCardDetails}) => 
       <Grid
         container
         spacing={6}
-        justifyContent={"space-evenly"}
         sx={{overflowX: 'hidden'}}
       >
       {workCardDetails.map(wCD => {

@@ -10,6 +10,7 @@ export const menuElements: Array<NavigationGridElement> = [
   { elementText: 'Accredations', elementPath: '/accredations' },
   { elementText: 'Skills', elementPath: '/skills' },
   { elementText: 'Hobbies', elementPath: '/hobbies', },
+  { elementText: 'Projects', elementPath: '/projects', },
 ];
 
 export const wWords = ['Wandering', 'Wardroom', 'Weathered', 'Windfall', 'Woodworker', 'Warrior', 'World'];

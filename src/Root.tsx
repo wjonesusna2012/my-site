@@ -12,6 +12,7 @@ import Dialer from './dialer/dialer';
 import LandingPage from './isa/LandingPage';
 import Background from './images/ClimbingBackground.png';
 import { navyWorkCardDetails, workCardDetails } from './workCards/workCardInput';
+import ProjectCardList from './projectCards/projectCards';
 // const testItems = [{ description: 'Default Ocean', image: Ocean }];
 
 const Layout = () => {
@@ -75,6 +76,10 @@ const Root = () => {
         {
           path: "/accredations",
           element: <SwipeAssembly swipeData={SwiperProfessionalCerts} />
+        },
+        {
+          path: "/projects",
+          element: <ProjectCardList />
         },
       ]
     },
