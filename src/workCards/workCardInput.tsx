@@ -18,10 +18,11 @@ export const workCardDetails: WorkCardProps[] = [
     durationString: `November 2022 - Present`,
     thumbnailSource: Syncfab,
     mediaSource: SyncfabBackground,
-    workSummary: '1 of 2 developers currently improving the Material Management System (MMS) and DApp for Syncfab’s supply chain management system. Our unique application mixes the data-heavy supply chain procurement process with the finality of blockchain technology, looking to incentivize participation for suppliers in a highly asymmetric reward environment.',
+    workSummary: 'Lead developer currently improving the Material Management System (MMS) and DApp for Syncfab’s supply chain management system. Also responsible for devops for our production platform. Our unique application mixes the data-heavy supply chain procurement process with the finality of blockchain technology, looking to incentivize participation for suppliers in a highly asymmetric reward environment.',
     detailList: [
       'Utilized MongoDB (NoSQL), Node.js, Koa, and React.js across the DApp.',
       'Investigating usage of several ML models for optical text recognition and parsing.',
+      'Utilizes AWS EC2 instances, Docker, and Atlas for deploying production and UAT applications.',
     ],
   },
   {
@@ -69,7 +70,7 @@ export const navyWorkCardDetails: WorkCardProps[] = [
     durationString: `May 2015 - November 2016`,
     thumbnailSource: Navy,
     mediaSource: OperationsBackground,
-    workSummary: 'The operations officer is responsible for coordinating the operations of the ship\'s crew and ensuring the needs of external stakeholders are met. I was also responsible for troubleshooting and integrating several new features in our navigation/fire control system that had not been previously integrated in a fast attack submarine.',
+    workSummary: 'As the operations officer, I was responsible for coordinating the operations of the ship\'s crew and ensuring the needs of external stakeholders are met. I was also responsible for troubleshooting and integrating several new features in our navigation/fire control as well as providing feedback reports to developers on several new navigation features that had not been previously integrated in a fast attack submarine.',
     detailList: [
       'Responsible for planning and certifying the execution of approximately 30 cross-platform operations and coordinating that actions of department heads across 4 departments (Supply, Weapons, Engineering, and Navigation).',
       'Responsible for tracking supply and equipment changes that affect ship\'s weight and balance. Responsible for certifying the ship\'s helmsman and diving officers for operational safety.'
@@ -95,7 +96,7 @@ export const navyWorkCardDetails: WorkCardProps[] = [
     mediaSource: NNPTCBackground,
     workSummary: 'A graduate level, rigorous training pipeline developed to teach principles of nuclear engineering, reactor operation, and submarine tactical operations.',
     detailList: [
-      'Graduated 1st out of 92 officer canidates, receiving the honor graduate award from the site\'s Commanding Officer.',
+      'Graduated first out of ninety-two officer candidates, receiving the honor graduate award from the site\'s Commanding Officer.',
     ],
   }
 ]

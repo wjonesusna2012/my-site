@@ -13,9 +13,11 @@ import LandingPage from './isa/LandingPage';
 import Background from './images/ClimbingBackground.png';
 import { navyWorkCardDetails, workCardDetails } from './workCards/workCardInput';
 import ProjectCardList from './projectCards/projectCards';
-// const testItems = [{ description: 'Default Ocean', image: Ocean }];
+import { useMediaQuery } from '@mui/material';
+import DrawerMenu from './drawer/drawer';
 
 const Layout = () => {
+  const isSmall = useMediaQuery('(max-width:1200px)');
   return (
     <div className="App" style={{
         width: "100%",
@@ -24,7 +26,10 @@ const Layout = () => {
         display: 'flex',
         flexDirection: 'column',
       }}>
-      <NavigationMenu />
+      {isSmall ?
+          <DrawerMenu /> :
+          <NavigationMenu />
+      }
       <div
           style={{
             overflowY: 'scroll',

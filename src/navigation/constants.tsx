@@ -4,6 +4,7 @@ export type NavigationGridElement = {
 };
 
 export const menuElements: Array<NavigationGridElement> = [
+  { elementText: 'Home', elementPath: '/', },
   { elementText: 'Software Career', elementPath: '/fullstack', },
   { elementText: 'Naval Career', elementPath: '/navy' },
   { elementText: 'Education', elementPath: '/education', },
