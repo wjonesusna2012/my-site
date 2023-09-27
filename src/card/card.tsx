@@ -25,7 +25,7 @@ const Card: React.FC<CardProps> = ({ description, imageName, changeCardLeft, cha
         containerHovered={hovered}
         clickHandler={changeCardRight}
       />
-      <span onClick={() => expandDescription()} className={`ClickForMore ${hovered ? 'ClickHovered' : 'NotClickHovered'}`}>+</span>
+      <span onClick={() => expandDescription()} className={'ClickForMore ClickHovered'}>+</span>
       <div className={`CardDescription ${hovered ? 'ContainerHovered' : 'ContainerNotHovered'}`}>{description}</div>
     </div>
   )

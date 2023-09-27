@@ -150,6 +150,7 @@ img {
     right: calc(50% - 0.5em - 2.5px);
     height: 1em;
     width: 1em;
+    line-height: 0.95em;
     border: 2px solid var(--main-text);
     transition: border ease-in 200ms;
     padding: 5px;
