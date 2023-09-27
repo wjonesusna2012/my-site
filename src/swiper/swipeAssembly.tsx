@@ -27,7 +27,7 @@ const Descriptor: React.FC<({size: number, title: string, icon: string})> = ({si
   return (
     <div className="wholeVertical" style={{
         position: 'absolute',
-        width: `${size - 10}px`,
+        width: `min(${size - 10}px, 100% - 10px)`,
         top: 0,
         left: 0,
         display: 'flex',

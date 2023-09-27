@@ -15,14 +15,15 @@ const SwipeCard: React.FC<({
   externalLink: string,
 })> = ({externalLink, title, description, chipLabel, dateRange, leftElement, rightElement, detailText}) => {
   const [expanded, setExpanded] = useState(false);
-  const [xCoor, setXCoor] = useState(295);
+  const [xCoor, setXCoor] = useState(100);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
   const mouseHandler = (e: React.MouseEvent<HTMLDivElement>) => {
     if(wrapperRef !== null && wrapperRef.current !== null) {
       const boundedX = wrapperRef.current.getBoundingClientRect();
-      if (Math.abs(e.clientX - boundedX.left - 5) >= 2) {
-        setXCoor(e.clientX - boundedX.left - 5);
+      const boundedWidth = boundedX.right - boundedX.left;
+      if (Math.abs((e.clientX - boundedX.left - 5) / boundedWidth * 100) >= 1) {
+        setXCoor((e.clientX - boundedX.left - 5) / boundedWidth * 100);
       }
     }
   }
@@ -46,14 +47,14 @@ const SwipeCard: React.FC<({
               width: '100%',
               justifyContent: 'center'
             }}>
-              <div ref={wrapperRef} className="swipeCardWrapper" onMouseMove={mouseHandler} onMouseLeave={() => setXCoor(295)}>
+              <div ref={wrapperRef} className="swipeCardWrapper" onMouseMove={mouseHandler} onMouseLeave={() => setXCoor(100)}>
                 <div className="swipeCardLayerBottom">
                   {leftElement}
                 </div>
-                <div style={{width: `${xCoor}px`}} className="swipeCardLayerTop">
+                <div style={{width: `${xCoor}%`}} className="swipeCardLayerTop">
                   {rightElement}
                 </div>
-                <div style={{left:`${xCoor}px` }} className={`swipeDivider${xCoor === 295 ? 'Invisible' : ''}`} />
+                <div style={{left:`${xCoor}%` }} className={`swipeDivider${xCoor >= 99 ? 'Invisible' : ''}`} />
               </div>
           </div>
         <Typography>

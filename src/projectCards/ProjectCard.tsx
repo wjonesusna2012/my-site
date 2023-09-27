@@ -1,6 +1,5 @@
 import React from 'react';
-import { Stack, Chip, Typography, Card, ListItem, CardContent, Link, CardHeader, CardMedia, List, ListItemText, ListItemIcon } from '@mui/material';
-import Check from '@mui/icons-material/Check';
+import { Stack, Chip, Typography, Card, CardContent, Link, CardHeader }from '@mui/material';
 import { OpenInNew } from '@mui/icons-material';
 
 export interface ProjectCardProps {
@@ -21,7 +20,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           const resultJSON: { [key: string]: number } = await res.json();
           const langs = Object.keys(resultJSON);
           setLanguages(langs);
-      })}, []);
+      })}, [languagesURL]);
   return (
     <Card>
       <CardHeader

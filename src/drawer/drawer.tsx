@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { menuElements } from '../navigation/constants';
 import Logo from '../images/logo.png';
 import { Box, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
-import MenuButton from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 const DrawerMenu: React.FunctionComponent = () => {
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
