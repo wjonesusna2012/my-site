@@ -14,7 +14,7 @@ const Card: React.FC<CardProps> = ({ description, imageName, changeCardLeft, cha
   const [hovered, setHovered] = useState(false);
   return (
     <div className="CardContainer" onMouseOver={() => { setHovered(true)}} onMouseOut={() => { setHovered(false)}}>
-      <img alt="Text Here" src={`${imageName}`} onClick={() => expandDescription()} height="500" width="500" />
+      <img alt="Text Here" src={`${imageName}`} onClick={() => expandDescription()}  className="CardImage" />
       <Arrow
         direction="Left"
         containerHovered={hovered}
