@@ -15,16 +15,23 @@ const DrawerMenu: React.FunctionComponent = () => {
       anchor="left"
       open={drawerOpen}
       onClose={() => { setDrawerOpen(false); }}
+      sx={{ color: 'red' }}
+      PaperProps={{
+        sx: {
+            backgroundColor: 'var(--alt-text)',
+            color: 'var(--main-text)',
+        }
+      }}
     >
-      <Box sx={{width: 250 }}>
+      <Box sx={{ width: 250 }}>
         <List>
             {menuElements.map((element) => (
-              <Link to={element.elementPath} onClick={() => {setDrawerOpen(false)}}>
+              <Link to={element.elementPath} style={{ textDecoration: 'none' }} onClick={() => {setDrawerOpen(false)}}>
                   <ListItem
                     key={`ListItem${element.elementText}`}
                   >
                     <ListItemButton>
-                      <ListItemText primary={element.elementText} />
+                      <ListItemText sx={{ textDecoration: 'none', color: 'white' }} primary={element.elementText} />
                     </ListItemButton>
                   </ListItem>
               </Link>

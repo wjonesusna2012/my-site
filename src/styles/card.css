@@ -195,7 +195,6 @@ img {
 .LongCardDescriptionHidden {
   display: none;
   color: var(--alt-text);
-  animation:
 }
 
 .CardDescriptionFlexContainer {
