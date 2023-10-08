@@ -10,6 +10,8 @@ import NPTUBackground from '../images/nptubackground.jpeg';
 import NNPTCBackground from '../images/nnptcbackground.jpeg';
 import CRABackground from '../images/crabackground.jpg';
 import OperationsBackground from '../images/operationsbackground.jpeg';
+import NSA from '../images/NSA.png';
+import NSABackground from '../images/NSABackground.jpeg';
 
 export const workCardDetails: WorkCardProps[] = [
   {
@@ -48,6 +50,18 @@ export const workCardDetails: WorkCardProps[] = [
       'Investigated upgradability schemas such as ERC-2535 for future greenfield projects',
       'Utilized MySQL/PostgreSQL, Node.js, Express, React.js, and web3.js to create a DApp for the Intraday Repo platform',
       'Utilized Truffle, Ganache, and Mocha to develop version 2 contracts for repo as well as Proof-of-concept platforms for future unreleased products.',
+    ],
+  },
+  {
+    externalLink: 'https://www.nsa.gov',
+    title: 'National Security Agency - Summer Intern',
+    durationString: `June 2011 - July 2011`,
+    thumbnailSource: NSA,
+    mediaSource: NSABackground,
+    workSummary: 'Worked on an interdisciplenary team investigating network protocols for targeted applications.',
+    detailList: [
+      'Utilized Visual C++ 2008 (9.0) to work on a large (80+ GB interdisciplenary project)',
+      'Created a cryptographically secure implementation to integrate with network protocols ',
     ],
   }
 ]
