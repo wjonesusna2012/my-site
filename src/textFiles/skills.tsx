@@ -10,11 +10,22 @@ import spring from '../images/spring.png';
 import storybook from '../images/Storybook.svg';
 import jest from '../images/jest.png';
 import charteredfinancialanalyst from '../images/cfa.png';
+import java from '../images/java.png';
 import ecornell from '../images/ecornell.png';
 import { SwipeAssemblyProps } from '../definitions/interfaces';
 
 export const SwipeAssemblyTestData: SwipeAssemblyProps = {
   swipeData: [
+    {
+      externalLink: 'https://java.com',
+      optionGroup: 'Language',
+      rating: 4,
+      icon: java,
+      description: 'A highly portable, general use programming language. I am very familiar with OO design principles and data structures in the Java STL.',
+      title: 'Java',
+      improvement: 'I should learn more about Java generics and in particular reified typing.',
+      startDate: new Date('10-01-2023'),
+    },
     {
       externalLink: 'https://nodejs.org/en',
       optionGroup: 'Framework',

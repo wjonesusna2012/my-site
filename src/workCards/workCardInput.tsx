@@ -2,6 +2,8 @@ import type { WorkCardProps } from './WorkCard';
 import JPMorgan from '../images/jpmorgan.jpeg';
 import JPMorganBackground from '../images/jpmorganbackground.jpeg';
 import Syncfab from '../images/syncfab.jpeg';
+import RTX from '../images/rtx.png';
+import RTXBackground from '../images/RTXBackground.jpeg';
 import SyncfabBackground from '../images/SyncfabBackground.png';
 import SearchSide from '../images/searchside.jpeg';
 import SearchSideBackground from '../images/SearchSideBackground.jpeg';
@@ -14,6 +16,18 @@ import NSA from '../images/NSA.png';
 import NSABackground from '../images/NSABackground.jpeg';
 
 export const workCardDetails: WorkCardProps[] = [
+  {
+    externalLink: 'https://rtx.com',
+    title: 'RTX (Cypher, LLC) - Senior Java Developer',
+    durationString: `October 2023 - Present`,
+    thumbnailSource: RTX,
+    mediaSource: RTXBackground,
+    workSummary: 'Senior software developer on an agile, Java software development team responsible for delivering highly resilient systems.',
+    detailList: [
+      'Utilizes Java 8, MySQL, JUnit testing frameworks, Equinox, and AWS.',
+      'Increased focus on process improvement, including filling in knowledge gaps for newer employees and documentation for constantly evolving features.',
+    ],
+  },
   {
     externalLink: 'https://syncfab.com',
     title: 'Syncfab - Lead Software Engineer',
@@ -30,7 +44,7 @@ export const workCardDetails: WorkCardProps[] = [
   {
     externalLink: 'https://searchside.com',
     title: 'SearchSide - Lead Engineer',
-    durationString: `March 2023 - Present`,
+    durationString: `March 2023 - December 2023`,
     thumbnailSource: SearchSide,
     mediaSource: SearchSideBackground,
     workSummary: 'One of two developers improving an antiquated system for publishing tens of thousands of pages optimized for Google’s search algorithm.',
