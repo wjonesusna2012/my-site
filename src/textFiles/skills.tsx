@@ -3,6 +3,8 @@ import navsea08 from '../images/navsea08.jpeg';
 import javascript from '../images/javascript.png';
 import html5 from '../images/html5.png';
 import ethereum from '../images/ethereum.png';
+import mongodb from '../images/mongodb.png';
+import postgresql from '../images/postgresql.png';
 import solidity from '../images/solidity.png';
 import python from '../images/python.png';
 import reactjs from '../images/react.svg';
@@ -124,6 +126,26 @@ export const SwipeAssemblyTestData: SwipeAssemblyProps = {
       description: 'Familiar with the mechanics of the ethereum blockchain as outlined in the text "Mastering Ethereum".',
       title: 'Ethereum',
       improvement: 'I look forward to understanding more of how the "Merge" has affected the tokenomics of mining on mainnet.',
+      startDate: new Date('03-01-2019'),
+    },
+    {
+      externalLink: 'https://mongodb.com',
+      optionGroup: 'Technology',
+      rating: 4,
+      icon: mongodb,
+      description: 'I am familiar with optimizing MongoDB queries, as well as constructing basic analytics from documents across multiple collections.',
+      title: 'MongoDB',
+      improvement: 'I look forward to developing and validating schemas for document collections to prepare for potential RDB integration.',
+      startDate: new Date('11-01-2022'),
+    },
+    {
+      externalLink: 'https://postgresql.org',
+      optionGroup: 'Technology',
+      rating: 4,
+      icon: postgresql,
+      description: 'I am familiar with basic queries, joins, optimization strategies, bind variables, and coordinated subqueries.',
+      title: 'PostgreSQL',
+      improvement: 'I look forward to learning better ways to optimize large queries across multiple data sets with join tables and batch queries.',
       startDate: new Date('03-01-2019'),
     },
   ]
