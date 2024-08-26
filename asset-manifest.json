@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.21e25f92.css",
-    "main.js": "/static/js/main.6156619a.js",
+    "main.js": "/static/js/main.9f2b2fe8.js",
     "static/media/SearchSideBackground.jpeg": "/static/media/SearchSideBackground.d4274f11e6c6a5d34c06.jpeg",
     "static/media/Salsa.png": "/static/media/Salsa.363efbdf4662138ccf0c.png",
     "static/media/operationsbackground.jpeg": "/static/media/operationsbackground.0c98a910fe98e48bdec8.jpeg",
@@ -19,6 +19,7 @@
     "static/media/ethereum.png": "/static/media/ethereum.d403f0da0756fe578217.png",
     "static/media/nnptcbackground.jpeg": "/static/media/nnptcbackground.be4b3c186f7adc66337a.jpeg",
     "static/media/NSABackground.jpeg": "/static/media/NSABackground.da5ac3ae2669c3072f03.jpeg",
+    "static/media/postgresql.png": "/static/media/postgresql.52d31cc1fd8306d5ff52.png",
     "static/media/python.png": "/static/media/python.3e8a90f52b67ce17a3f4.png",
     "static/media/SyncfabBackground.png": "/static/media/SyncfabBackground.7f005a004cb94d1a823a.png",
     "static/media/rtx.png": "/static/media/rtx.a1cd4add03b6224f7f0e.png",
@@ -33,10 +34,10 @@
     "static/media/Storybook.svg": "/static/media/Storybook.c143760c5be7f175b06e6be31349892f.svg",
     "index.html": "/index.html",
     "main.21e25f92.css.map": "/static/css/main.21e25f92.css.map",
-    "main.6156619a.js.map": "/static/js/main.6156619a.js.map"
+    "main.9f2b2fe8.js.map": "/static/js/main.9f2b2fe8.js.map"
   },
   "entrypoints": [
     "static/css/main.21e25f92.css",
-    "static/js/main.6156619a.js"
+    "static/js/main.9f2b2fe8.js"
   ]
 }
