@@ -188,8 +188,8 @@ export const SwiperProfessionalCerts = [
     rating: 5,
     icon: aws,
     description: 'This course teaches skills and knowledge in developing, optimizing, packaging, and deploying applications, using CI/CD workflows, and identifying and resolving application issues',
-    title: 'eCornell Machine Learning and AI',
-    improvement: '',
+    title: 'AWS Certified Developer - Associate',
+    improvement: 'I am interested in taking what I learned about Cognito User Pools and implementing small scale user management in my personal apps.',
     startDate: new Date('09-30-2024'),
   },
 ];
