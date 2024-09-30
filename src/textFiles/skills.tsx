@@ -14,6 +14,7 @@ import jest from '../images/jest.png';
 import charteredfinancialanalyst from '../images/cfa.png';
 import java from '../images/java.png';
 import ecornell from '../images/ecornell.png';
+import aws from '../images/aws.png';
 import { SwipeAssemblyProps } from '../definitions/interfaces';
 
 export const SwipeAssemblyTestData: SwipeAssemblyProps = {
@@ -180,5 +181,15 @@ export const SwiperProfessionalCerts = [
     title: 'eCornell Machine Learning and AI',
     improvement: '',
     startDate: new Date('04-01-2022'),
+  },
+  {
+    externalLink: 'https://www.credly.com/badges/47443522-da7c-475c-9744-051a5e49b11c/public_url',
+    optionGroup: 'Certifications',
+    rating: 5,
+    icon: aws,
+    description: 'This course teaches skills and knowledge in developing, optimizing, packaging, and deploying applications, using CI/CD workflows, and identifying and resolving application issues',
+    title: 'eCornell Machine Learning and AI',
+    improvement: '',
+    startDate: new Date('09-30-2024'),
   },
 ];
