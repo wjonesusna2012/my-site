@@ -14,12 +14,26 @@ import CRABackground from '../images/crabackground.jpg';
 import OperationsBackground from '../images/operationsbackground.jpeg';
 import NSA from '../images/NSA.png';
 import NSABackground from '../images/NSABackground.jpeg';
+import CapitalOne from '../images/CapitalOne.png'
+import CapitalOneBackground from '../images/CapitalOneBackground.jpeg';
 
 export const workCardDetails: WorkCardProps[] = [
   {
+    externalLink: 'https://capitalone.com',
+    title: 'Capital One - Senior Software Engineer',
+    durationString: `October 2024 - Present`,
+    thumbnailSource: CapitalOne,
+    mediaSource: CapitalOneBackground,
+    workSummary: 'Senior software developer on an agile, Java software development team responsible for delivering and maintaining scalable systems that are AWS native and span both front and back ends.',
+    detailList: [
+      'Utilizes Java 8, MySQL, JUnit testing frameworks, Cypress, Apache Beam, and AWS.',
+      'Focusing on building highly tested front-end user experiences along with streamlining processing of hundreds of thousands of account information, integrated with ML models to maximize customer retentionn and success.',
+    ],
+  },
+  {
     externalLink: 'https://rtx.com',
     title: 'RTX (Cypher, LLC) - Senior Java Developer',
-    durationString: `October 2023 - Present`,
+    durationString: `October 2023 - October 2024`,
     thumbnailSource: RTX,
     mediaSource: RTXBackground,
     workSummary: 'Senior software developer on an agile, Java software development team responsible for delivering highly resilient systems.',
